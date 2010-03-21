@@ -6,7 +6,6 @@
   <%= stylesheet_link_tag 'styles' %>
 </head>
 <body>
-<p style="color: green"><%= flash[:notice] %></p>
 <div id="container">
 	<div id="banner">
 	<!-- END #banner --></div>
@@ -18,16 +17,34 @@
 			<li id="search"><a href=#><span class="hidden">search</span></a></li>
 			<li id="profile"><a href=#><span class="hidden">profile</span></a></li>
 			<li id="login"><a href=#><span class="hidden">login</span></a></li>
-			<li id="contact"><a href=#><span class="hidden">contact</span></a></li>	
-			
-			
+			<li id="contact"><a href=#><span class="hidden">contact</span></a></li>				
 		</ul>
+		<div id="user_meta">
+			<% if current_user %>
+				Logged in as <%= current_user.email %>
+				<%= link_to "Edit Profile", edit_user_path(:current) %>
+				<%= link_to "Logout", logout_path %>
+			<% else %>	
+				<%= link_to "Register", new_user_path %>
+				<%= link_to "Login", login_path %>
+			<% end -%>
+		<!-- END #user_meta--></div>
 	<!-- END #nav_bar --></div>
 	<div id="content">	
+		<div id="flash_messages">
+			<% unless flash[:notice].blank? %>
+				<div id="notification"><%= flash[:notice] %></div>
+			<% end -%>
+			<% unless flash[:error].blank? %>
+				<div id="error"><%= flash[:error] %></div>
+			<% end %>
+		<!-- END #flash_messages --></div>	
 		<%= yield %>
 	<!-- END #content --></div>
+	<div class="clear"></div>
 	<div id="footer">
-		<p id="footer_content"><%= link_to "Terms of Service", :controller => "info", :action => "terms" %> | <%= link_to "Contact us", :controller => "info", :action => "terms" %></p>
+		<p id="footer_content"><%= link_to "Terms of Service", :controller => "info", :action => "terms" %> | 
+			<%= link_to "Contact us", :controller => "info", :action => "terms" %></p>
 	<!-- END #footer --></div>
 <!-- END #container --></div>
 </body>

@@ -9,11 +9,31 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100319104404) do
+ActiveRecord::Schema.define(:version => 20100321050903) do
 
   create_table "posts", :force => true do |t|
     t.string   "title"
     t.text     "body"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "original_article"
+  end
+
+  create_table "user_sessions", :force => true do |t|
+    t.string   "username"
+    t.string   "password"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "users", :force => true do |t|
+    t.string   "email",              :null => false
+    t.string   "crypted_password",   :null => false
+    t.string   "password_salt",      :null => false
+    t.string   "persistence_token",  :null => false
+    t.integer  "login_count"
+    t.integer  "failed_login_count"
+    t.datetime "last_login_at"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

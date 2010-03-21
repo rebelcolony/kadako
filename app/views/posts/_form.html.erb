@@ -1,0 +1,16 @@
+<% form_for(@post) do |f| %>
+  <%= f.error_messages %>
+
+
+    <%= f.label :title %><br />
+    <%= f.text_field :title, :size => 50 %><br />
+
+    <%= f.label :body %><br />
+    <%= f.text_area :body, :cols => 70 %><br />
+ 
+   <%= f.label :original_article %><br />
+    <%= f.text_field :original_article, :size => 50 %><br />
+  	<br />
+    <%= f.submit 'Create' %>
+  </p>
+<% end %>

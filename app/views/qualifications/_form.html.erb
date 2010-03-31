@@ -1,0 +1,27 @@
+<% form_for [@user, @qualification] do |f| %>
+  <%= f.error_messages %>
+	<p>
+		<%= f.label :governing_body %><br />
+		<%= collection_select(:qualification, :body_id, Body.find(:all), :id, :name) %>
+	</p>
+	<p>
+		<%= f.label :Level %><br />
+		<%= collection_select(:qualification, :level_id, Level.find(:all), :id, :level) %>
+	</p>
+	<p>
+		<%= f.label :Technique %><br />
+		<%= collection_select(:qualification, :technique_id, Technique.find(:all), :id, :name) %>
+	</p>
+	<p>
+		<%= f.label :Category %><br />
+		<%= collection_select(:qualification, :category_id, Category.find(:all), :id, :name) %>
+	</p>
+  <p>
+    <%= f.label :expire_date %><br />
+    <%= f.date_select :expire_date %>
+  </p>
+
+  <p>
+    <%= f.submit 'Create qualification' %>
+  </p>
+<% end %>

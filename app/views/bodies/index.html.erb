@@ -1,0 +1,16 @@
+<h2>All governing bodies</h2>
+
+<table>
+  
+<% @bodies.each do |body| %>
+  <tr>
+    <td><%=h body.name %></td>
+    <td><%= link_to 'Edit', edit_body_path(body) %></td>
+    <td><%= link_to 'Destroy', body, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New body', new_body_path %>

@@ -1,0 +1,14 @@
+<h2>All techniques</h2>
+<table>
+<% @techniques.each do |technique| %>
+  <tr>
+    <td><%=h technique.name %></td>
+    <td><%= link_to 'Edit', edit_technique_path(technique) %></td>
+    <td><%= link_to 'Destroy', technique, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New technique', new_technique_path %>

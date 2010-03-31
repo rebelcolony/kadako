@@ -1,13 +1,11 @@
-<p>
-  <b>Email:</b>
-  <%=h @user.email %>
-</p>
-
-<p>
-  <b>Password:</b>
-  <%=h @user.password %>
-</p>
-
-
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
+<div class="content_container">
+	<h3><%= @user.email %></h3>
+	<div id="user_nav">
+		<% if current_user %>
+			<%= link_to "Edit account details", edit_user_path(:current) %>
+			<% end -%>
+			<%= link_to 'Show', @user.profile %>
+			<%= link_to 'Edit your profile', edit_profile_path(:current) %>
+			<%= link_to 'Create a profile', new_profile_path %>
+	<!-- END #user_nav --></div>
+<!-- END .content_container --></div>	

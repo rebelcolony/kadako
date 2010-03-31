@@ -9,7 +9,37 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100321050903) do
+ActiveRecord::Schema.define(:version => 20100329063233) do
+
+  create_table "bodies", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "categories", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "histories", :force => true do |t|
+    t.date     "start"
+    t.date     "end"
+    t.text     "description"
+    t.text     "equipment"
+    t.string   "company"
+    t.string   "position"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "profile_id"
+  end
+
+  create_table "levels", :force => true do |t|
+    t.string   "level"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "posts", :force => true do |t|
     t.string   "title"
@@ -17,6 +47,30 @@ ActiveRecord::Schema.define(:version => 20100321050903) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "original_article"
+  end
+
+  create_table "profiles", :force => true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "user_id"
+  end
+
+  create_table "qualifications", :force => true do |t|
+    t.date     "expire_date"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "user_id"
+    t.integer  "body_id"
+    t.integer  "category_id"
+    t.integer  "technique_id"
+    t.integer  "level_id"
+    t.integer  "profile_id"
+  end
+
+  create_table "techniques", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "user_sessions", :force => true do |t|

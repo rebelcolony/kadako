@@ -1,7 +1,13 @@
 <div class="content_container">
+	<% if admin? %>
 	<div id="admin_links">
-		<%= link_to "New Post", new_post_path %>
+		<%= link_to "New Post", new_post_path %> 
+		<%= link_to "Bodies", bodies_url %> 
+		<%= link_to "Techniques", techniques_url %>
+		<%= link_to "Categories", categories_url %>
+		<%= link_to "Levels", levels_url %>
 	<!-- END #admin_links --></div>
+	<% end -%>
 	<div id="intro_blurb">
 		<p>KADAKO Labour cc is a company providing a labour broker service to qualified inspection personnel in the oil, gas, 
 				petrochemical, mining, power generation and aviation industry locally and international. Be it Non-Destructive Testing, 
@@ -12,10 +18,15 @@
 	<div id="posts">
 		<% for post in @posts %>
 			<div class="post">
-				<h3><%= post.title %><span class="post_admin_links"> <%= link_to "Edit", edit_post_url(post) %> <%= link_to 'Destroy', post, :confirm => 'Are you sure?', :method => :delete %></span></h3>
+				<h3><%= post.title %>
+					<% if admin? %>
+						<span class="post_admin_links"> <%= link_to "Edit", edit_post_url(post) %> 
+						<%= link_to 'Destroy', post, :confirm => 'Are you sure?', :method => :delete %></span>
+					<% end -%></h3>
+						
 					<%= post.created_at.to_s(:long) %><br />
 					<%= auto_link truncate(post.body, :length => 270) %>
-					<%= auto_link truncate(post.original_article, :length => 50) %>
+					<span class="post_external_links"><%= auto_link truncate(post.original_article, :length => 50) %></span>
 			<!-- END .post --></div>	
 		<% end -%>			
 		

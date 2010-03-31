@@ -1,4 +1,5 @@
 class PostsController < ApplicationController
+before_filter :authorize
 
   def new
     @post = Post.new

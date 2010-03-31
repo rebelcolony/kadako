@@ -14,7 +14,9 @@
 			<li id="home"<%= " class='selected'" if controller.controller_name == "info" %>>
 				 <%= link_to "", :controller => "info" %>
 			</li>
-			<li id="search"><a href=#><span class="hidden">search</span></a></li>
+			<li id="search"<%= " class='selected'" if controller.controller_name == "profiles" %>>
+				 <%= link_to "", :controller => "profiles" %>
+			</li>
 			<li id="profile"><a href=#><span class="hidden">profile</span></a></li>
 			<li id="login"><a href=#><span class="hidden">login</span></a></li>
 			<li id="contact"><a href=#><span class="hidden">contact</span></a></li>				
@@ -22,7 +24,7 @@
 		<div id="user_meta">
 			<% if current_user %>
 				Logged in as <%= current_user.email %>
-				<%= link_to "Edit Profile", edit_user_path(:current) %>
+				<%= link_to "Profile", current_user %>
 				<%= link_to "Logout", logout_path %>
 			<% else %>	
 				<%= link_to "Register", new_user_path %>

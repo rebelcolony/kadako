@@ -1,0 +1,9 @@
+production:
+  adapter: mysql
+  encoding: utf8
+  reconnect: false
+  database: kadako
+  pool: 5
+  username: root
+  password: FR8sT6
+  socket: /var/run/mysqld/mysqld.sock

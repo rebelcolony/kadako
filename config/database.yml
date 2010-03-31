@@ -37,12 +37,12 @@ test:
   password: depassion
   socket: /tmp/mysql.sock
 
-production:
-  adapter: mysql
-  encoding: utf8
-  reconnect: false
-  database: kadako_production
-  pool: 5
-  username: root
-  password: depassion
-  socket: /tmp/mysql.sock
+  production:
+    adapter: mysql
+    encoding: utf8
+    reconnect: false
+    database: kadako
+    pool: 5
+    username: root
+    password: FR8sT6
+    socket: /var/run/mysqld/mysqld.sock

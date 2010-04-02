@@ -1,15 +1,9 @@
-<h2>All levels</h2>
-
-<% @levels.each do |level| %>
-  <tr>
-    <td><%=h level.level %></td>
-   
-    <td><%= link_to 'Edit', edit_level_path(level) %></td>
-    <td><%= link_to 'Destroy', level, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
+<h2 class="h2header">All levels</h2>
+<span><%= link_to 'New level', new_level_path %></span>
+	<ul> 
+	<% for level in @levels %>
+  	<li><h3><%=h level.level %> <span class="admin_links"><%= link_to 'Edit', edit_level_path(level) %>
+    		<%= link_to 'Destroy', level, :confirm => 'Are you sure?', :method => :delete %></span></h3>
+    </li>
 <% end %>
-</table>
-
-<br />
-
-<%= link_to 'New level', new_level_path %>
+</ul>

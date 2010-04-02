@@ -1,19 +1,19 @@
 class QualificationsController < ApplicationController
-   
+   before_filter :get_user
   def show
-    @qualification = Qualification.find(params[:id])
+    @qualification = @user.qualifications.find(params[:id])
   end
 
   def new
-    @qualification = Qualification.new
+    @qualification = @user.qualifications.new
   end
 
   def edit
-    @qualification = Qualification.find(params[:id])
+    @qualification = current_user
   end
 
   def create
-    @qualification = Qualification.create(params[:qualification])
+    @qualification = @user.qualifications.create(params[:qualification])
       if @qualification.save
         flash[:notice] = 'Qualification was successfully created.'
         redirect_to current_user
@@ -23,7 +23,7 @@ class QualificationsController < ApplicationController
   end
 
   def update
-    @qualification = Qualification.find(params[:id])
+    @qualification = current_user
       if @qualification.update_attributes(params[:qualification])
         flash[:notice] = 'Qualification was successfully updated.'
         redirect_to current_user

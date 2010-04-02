@@ -1,16 +1,10 @@
-<h2>All governing bodies</h2>
-
-<table>
-  
-<% @bodies.each do |body| %>
-  <tr>
-    <td><%=h body.name %></td>
-    <td><%= link_to 'Edit', edit_body_path(body) %></td>
-    <td><%= link_to 'Destroy', body, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
+<h2 class="h2header">All governing bodies</h2>
+<span><%= link_to 'New body', new_body_path %></span>
+	<ul> 
+	<% for body in @bodies %>
+  	<li><h3><%=h body.name %> <span class="admin_links"><%= link_to 'Edit', edit_body_path(body) %>
+    		<%= link_to 'Destroy', body, :confirm => 'Are you sure?', :method => :delete %></span></h3>
+    </li>
 <% end %>
-</table>
+</ul>
 
-<br />
-
-<%= link_to 'New body', new_body_path %>

@@ -1,12 +1,12 @@
 class HistoriesController < ApplicationController
-
+  before_filter :get_user
 
   def show
-    @history = History.find(params[:id])
+    @history = @user.histories.find(params[:id])
   end
 
   def new
-    @history = History.new
+    @history = @user.histories.new
   end
 
   def edit
@@ -14,7 +14,7 @@ class HistoriesController < ApplicationController
   end
 
   def create
-    @history = History.create(params[:history])
+    @history = @user.histories.create(params[:history])
       if @history.save
         flash[:notice] = 'History was successfully created.'
         redirect_to root_url
@@ -24,10 +24,10 @@ class HistoriesController < ApplicationController
   end
 
   def update
-    @history = History.find(params[:id])
+    @history = @user.histories.find(params[:id])
       if @history.update_attributes(params[:history])
         flash[:notice] = 'History was successfully updated.'
-        redirect_to root_url
+        redirect_to current_user
       else
         render :action => "edit"
     end

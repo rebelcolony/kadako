@@ -1,0 +1,9 @@
+<h2 class="h2header">All sectors</h2>
+<span><%= link_to 'New sector', new_sector_path %></span>
+	<ul> 
+	<% for sector in @sectors %>
+  	<li><h3><%=h sector.name %> <span class="admin_links"><%= link_to 'Edit', edit_sector_path(sector) %>
+    		<%= link_to 'Destroy', sector, :confirm => 'Are you sure?', :method => :delete %></span></h3>
+    </li>
+<% end %>
+</ul>

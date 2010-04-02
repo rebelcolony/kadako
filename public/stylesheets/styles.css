@@ -10,6 +10,10 @@ li {
 form p {
 	margin-top:7px;
 }
+
+#content div {
+	margin-top:5px;
+}
 /*===CLASS STYLES==========================================================*/
 .content_container {
 	padding:10px;
@@ -29,6 +33,14 @@ form p {
 
 .clear {
 	clear:both;
+}
+
+.admin_links a{
+	text-decoration:none;
+	border:1px solid #fff;
+	padding:1px;
+	margin-top:5px;
+	font-size:0.7em;
 }
 
 /*===BODY==========================================================*/
@@ -149,15 +161,36 @@ body {
 }
 
 /*===CONTENT==========================================================*/
-#content {
+#content  {
 	min-height:500px;
 	padding:10px;
+}
+
+#content a {
+	color:#204fe8;
+}
+
+#content a:hover {
+	background:#204fe8;
+	color:#fff;
+	text-decoration:none;
+}
+
+#content h2 {
+	margin-bottom:5px;
+	margin-top:10px;
+}
+
+#content h3 {
+	margin-bottom:5px;
+	margin-top:10px;
 }
 
 /*===FOOTER==========================================================*/
 #footer {
 	height:30px;
 	background:url(../images/nav_bg.gif) repeat-y;
+	border-top:#fff solid 1px;
 }
 p#footer_content {
 	margin-left:375px;
@@ -179,9 +212,9 @@ p#footer_content a {
 }
 
 #admin_links {
-	margin-left:200px;
+	margin-left:8px;
 	background:;
-	margin-bottom:10px;
+	margin-bottom:2px;
 	height:20px;
 }
 
@@ -276,9 +309,9 @@ div.post a:hover {
 
 /*===USER-QUALS==========================================================*/
 .user_qual_box {
-	background:#cdcdcd;
+	background:;
 	margin-top:5px;
-	height:30px;
+	height:;
 }
 
 .user_qual_box_body_header {
@@ -308,11 +341,25 @@ div.post a:hover {
 	margin-bottom:20px;
 }
 
+#user_quals_table tr:hover {
+background-color: #f9ffb5;
+}
+
+
+
 .list-line-odd {
 	background:#CCC;
 }
 
 .list-line-even {
+	
+}
+
+.list-line-odd_user_index {
+	background:#DFE6C4;
+}
+
+.list-line-even_user_index {
 	
 }
 
@@ -336,7 +383,7 @@ h2.h2header {
 /*===USER-HISTORIES==========================================================*/
 .history_box {
 	margin-top:7px;
-	background:#cdcdcd;
+	background:;
 	padding:3px;
 }
 
@@ -345,13 +392,28 @@ h2.h2header {
 }
 
 .history_date {
-	
+
 }
 
+.history {
+	background:#cdcdcd;
+	padding-left:3px;
+	padding-right:3px;	
+	padding-top:0px;
+}
+
+.history_sector {
+	background:#999;
+	display:inline;
+	border:1px solid #300;
+	padding-top:0px;
+	margin-left:0px;
+	margin-top:2px;
+}
 
 /*===USER-INDEX==========================================================*/
 .candidate_index_box {
-	background:#cdcdcd;
+	background:#C6C6C6;
 	margin-top:5px;
 }
 
@@ -375,6 +437,7 @@ h2.h2header {
 #flash_messages {
 	height:35px;
 	margin-top:10px;
+	margin-bottom:10px;
 }
 
 #notification {

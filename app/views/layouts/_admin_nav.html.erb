@@ -1,0 +1,10 @@
+<% if admin? %>
+		<div id="admin_links">
+			<%= link_to "New Post", new_post_path %> 
+			<%= link_to "Bodies", bodies_url %> 
+			<%= link_to "Techniques", techniques_url %>
+			<%= link_to "Categories", categories_url %>
+			<%= link_to "Levels", levels_url %>
+			<%= link_to "Sectors", sectors_url %>
+		<!-- END #admin_links --></div>
+<% end -%>

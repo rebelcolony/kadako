@@ -1,3 +1,4 @@
 class History < ActiveRecord::Base
-  belongs_to :profile
+  belongs_to :user
+  belongs_to :sector
 end

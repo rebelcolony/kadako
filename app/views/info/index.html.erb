@@ -1,13 +1,5 @@
 <div class="content_container">
-	<% if admin? %>
-	<div id="admin_links">
-		<%= link_to "New Post", new_post_path %> 
-		<%= link_to "Bodies", bodies_url %> 
-		<%= link_to "Techniques", techniques_url %>
-		<%= link_to "Categories", categories_url %>
-		<%= link_to "Levels", levels_url %>
-	<!-- END #admin_links --></div>
-	<% end -%>
+	
 	<div id="intro_blurb">
 		<p>KADAKO Labour cc is a company providing a labour broker service to qualified inspection personnel in the oil, gas, 
 				petrochemical, mining, power generation and aviation industry locally and international. Be it Non-Destructive Testing, 
@@ -20,7 +12,7 @@
 			<div class="post">
 				<h3><%= post.title %>
 					<% if admin? %>
-						<span class="post_admin_links"> <%= link_to "Edit", edit_post_url(post) %> 
+						<span class="admin_links"> <%= link_to "Edit", edit_post_url(post) %> 
 						<%= link_to 'Destroy', post, :confirm => 'Are you sure?', :method => :delete %></span>
 					<% end -%></h3>
 						

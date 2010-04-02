@@ -1,4 +1,4 @@
 require 'spec_helper'
 
-describe "Profiles" do
+describe "Sectors" do
 end

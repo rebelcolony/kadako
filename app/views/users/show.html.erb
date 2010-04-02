@@ -4,8 +4,41 @@
 		<% if current_user %>
 			<%= link_to "Edit account details", edit_user_path(:current) %>
 			<% end -%>
-			<%= link_to 'Show', @user.profile %>
-			<%= link_to 'Edit your profile', edit_profile_path(:current) %>
-			<%= link_to 'Create a profile', new_profile_path %>
+		<%= link_to "New qualification", new_user_qualification_path(@user) %>
+		<%= link_to "New work history", new_user_history_path(@user) %>
 	<!-- END #user_nav --></div>
+	
+		<h2 class="h2header">Qualifications</h2>
+		<table id="user_quals_table", cellspacing="1", border="0", width="850px">
+		<% for qualification in @user.qualifications %>
+			<tr class="<%= cycle('list-line-odd', 'list-line-even') %>">
+				<td width=140><h3 class="user_qual_box_body_header"><%= qualification.body.name %></h3></td>
+				<td width=80><h3 class="user_qual_box_level_header"><%= qualification.level.level %></h3></td>
+				<td width=400><h3 class="user_qual_box_tech_header"><%= qualification.technique.name %></h3></td>
+				<td width=380><h3 class="user_qual_box_tech_header"><%= qualification.category.name %></h3></td>
+				<td width=200><h3 class="user_qual_box_tech_header"><%= qualification.expire_date %></h3></td>
+			</tr>			
+		<% end -%>
+		</table>	
+		
+		<div class="history_box">
+			<h2 class="h2header">Work History</h2>
+			<% for history in @user.histories %>
+				<div class="history">
+					<div class="history_date">
+						<h3><%= history.company %><br />
+								<%= history.position %><br />
+								<%= history.start %> to <%= history.end %>
+								<span class="history_sector"><%= history.sector.name %></span> 
+							<span class="admin_links"><%= link_to 'Edit', edit_user_history_path(@user, history) %> 
+							<%= link_to 'Destroy', [@user, history], :method => :delete, :confirm => "Are you sure?" %></h3>
+					<!-- END .history_date--></div>
+					<div class="history_description">
+						<%= history.description %><br />
+						<%= history.equipment %>	
+					<!-- END .history_description --></div>	
+				<!-- END .history --></div>
+			<% end -%>
+		<!-- END .history_box --></div>	
+	<div class="clear"></div>
 <!-- END .content_container --></div>	

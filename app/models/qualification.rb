@@ -1,5 +1,5 @@
 class Qualification < ActiveRecord::Base
-  belongs_to :profile
+  belongs_to :user
   belongs_to :body 
   belongs_to :category
   belongs_to :technique

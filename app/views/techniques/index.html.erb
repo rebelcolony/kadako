@@ -1,14 +1,9 @@
-<h2>All techniques</h2>
-<table>
-<% @techniques.each do |technique| %>
-  <tr>
-    <td><%=h technique.name %></td>
-    <td><%= link_to 'Edit', edit_technique_path(technique) %></td>
-    <td><%= link_to 'Destroy', technique, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
+<h2 class="h2header">All techniques</h2>
+<span><%= link_to 'New technique', new_technique_path %></span>
+	<ul> 
+	<% for technique in @techniques %>
+  	<li><h3><%=h technique.name %> <span class="admin_links"><%= link_to 'Edit', edit_technique_path(technique) %>
+    		<%= link_to 'Destroy', technique, :confirm => 'Are you sure?', :method => :delete %></span></h3>
+    </li>
 <% end %>
-</table>
-
-<br />
-
-<%= link_to 'New technique', new_technique_path %>
+</ul>

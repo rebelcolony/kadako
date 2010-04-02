@@ -1,0 +1,8 @@
+<div id="flash_messages">
+			<% unless flash[:notice].blank? %>
+				<div id="notification"><%= flash[:notice] %></div>
+			<% end -%>
+			<% unless flash[:error].blank? %>
+				<div id="error"><%= flash[:error] %></div>
+			<% end %>
+		<!-- END #flash_messages --></div>

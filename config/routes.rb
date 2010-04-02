@@ -1,8 +1,14 @@
 ActionController::Routing::Routes.draw do |map|
-  map.resources :profiles
-  map.resources :users
-  map.resources :qualifications
-  map.resources :histories  
+  
+  
+
+  
+  map.resources :users do |user|
+     user.resources :qualifications
+     user.resources :histories
+  end   
+  
+  map.resources :sectors
   map.resources :categories
   map.resources :techniques
   map.resources :bodies
@@ -10,6 +16,17 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :posts
   map.resources :sessions
   map.resources :levels
+  
+  map.with_options :controller => 'contact' do |contact|
+    contact.contact '/contact',
+      :action => 'index',
+      :conditions => { :method => :get }
+
+    contact.contact '/contact',
+      :action => 'create',
+      :conditions => { :method => :post }
+  end
+  
     
   map.terms "terms", :controller => "info", :action => "terms"
   map.logout "logout", :controller => "user_sessions", :action => "destroy"

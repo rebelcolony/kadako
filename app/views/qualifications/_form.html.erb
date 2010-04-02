@@ -1,5 +1,7 @@
 <% form_for [@user, @qualification] do |f| %>
+
   <%= f.error_messages %>
+
 	<p>
 		<%= f.label :governing_body %><br />
 		<%= collection_select(:qualification, :body_id, Body.find(:all), :id, :name) %>

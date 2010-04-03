@@ -10,5 +10,12 @@ class Notifications < ActionMailer::Base
       :email => email_params[:email]
     end
   
+    def registration_confirmation(user)
+      recipients   user.email
+      from         "no-reply@kadako.com"
+      subject      "Thanks for Registering with Kadako"
+      body         :user => user
+      content_type "text/html"
+    end
 
 end

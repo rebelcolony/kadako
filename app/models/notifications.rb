@@ -1,7 +1,7 @@
 class Notifications < ActionMailer::Base
   def contact(email_params)
       subject "[KADAKO Contact Form] " << email_params[:subject]
-      recipients "kevin.bett@gmail.com" # Replace with your address
+      recipients "kevin.bett@gmail.com, daniel.greyling@kadako.com"
       from email_params[:email]
       sent_on Time.now.utc
 

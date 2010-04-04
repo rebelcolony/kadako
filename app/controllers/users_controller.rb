@@ -16,7 +16,7 @@ end
   @user = User.create(params[:user])
     if @user.save
       flash[:notice] = "Registration successfull"
-      #Notifications.deliver_registration_confirmation(@user)
+      Notifications.deliver_registration_confirmation(@user)
       redirect_to root_url
     else
       render :action => "new"

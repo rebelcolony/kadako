@@ -65,6 +65,14 @@ body {
 	background:url(../images/logo.png) no-repeat 0px 0px;
 }
 
+#banner a {
+	position:absolute;
+	height:60px;
+	width:250px;
+	margin-top:20px;
+	margin-left:10px;
+}
+
 
 /*===NAV==========================================================*/
 #nav_bar {

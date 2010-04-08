@@ -3,11 +3,11 @@
 
   <p>
     <%= f.label :start %><br />
-    <%= f.date_select :start %>
+    <%= f.date_select :start, :discard_day => true, :start_year => 1945, :end_year => 2020, :order => [:day, :month, :year] %>
   </p>
   <p>
     <%= f.label :end %><br />
-    <%= f.date_select :end %>
+    <%= f.date_select :end, :discard_day => true, :start_year => 1945, :end_year => 2020, :order => [:day, :month, :year] %>
   </p>
 	<p>
 		<%= f.label :sector %><br />

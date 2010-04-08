@@ -1,5 +1,80 @@
 <h2>Edit your account details</h2>
-<%= render :partial => 'form' %>
+<div class="content_container">
+<% form_for @user, :html => { :multipart => true } do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :email %><br />
+    <%= f.text_field :email, :size => 30 %>
+  </p>
+  <p>
+    <%= f.label :password %><br />
+    <%= f.password_field :password %>
+  </p>
+	<p>
+    <%= f.label :password_confirmation %><br />
+    <%= f.password_field :password_confirmation %>
+  </p>
+  <p>
+    <%= f.submit 'Submit' %>
+  </p>
+
+	<!-- PERSONAL DETAILS -->
+	
+		<p>
+	    <%= f.label :name %><br />
+	    <%= f.text_field :name, :size => 30 %>
+	  </p>
+		<p>
+	    <h3>Upload a clear image of your face:</h3>
+			<%= f.file_field :headshot %>
+		</p>	
+		<p>
+	    <h3>Date of Birth:</h3>
+	    <%= f.date_select :dob, :start_year => 1945, :end_year => 2000, :order => [:day, :month, :year] %>
+	  </p>
+		<p>
+	    <%= f.label :address %><br />
+	    <%= f.text_area :address %>
+	  </p>
+		<p>
+	    <%= f.label :pcn_number %><br />
+	    <%= f.text_field :pcn_number, :size => 30 %>
+	  </p>
+		<p>
+	    <%= f.label :other_body_id %><br />
+	    <%= f.text_field :other_body_id, :size => 30 %>
+	  </p>
+		<p>
+	    <%= f.label :passport_number %><br />
+	    <%= f.text_field :passport_number, :size => 30 %>
+	  </p>
+		<p>
+	    <%= f.label :passport_expires %><br />
+	    <%= f.date_select :passport_expires, :start_year => 2009, :end_year => 2030, :order => [:day, :month, :year] %>
+	  </p>
+		<p>
+	    <%= f.label :nationality %><br />
+	    <%= f.text_field :nationality, :size => 30 %>
+	  </p>
+		<p>
+	    <%= f.label :contact_email %><br />
+	    <%= f.text_field :contact_email, :size => 30 %>
+	  </p>
+		<p>
+	    <%= f.label :home_phone %><br />
+	    <%= f.text_field :home_phone, :size => 30 %>
+	  </p>
+		<p>
+	    <%= f.label :mobile_phone %><br />
+	    <%= f.text_field :mobile_phone, :size => 30 %>
+	  </p>
+
+	 <p>
+	    <%= f.submit 'Submit' %>
+	  </p>
+	<% end %>
+	<!-- END .content_container--></div>
 
 
 

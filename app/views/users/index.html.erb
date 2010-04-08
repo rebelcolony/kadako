@@ -2,12 +2,14 @@
 
 <% for user in @users %>
   <div class="candidate_index_box">
-	Candidate id: <%= user.id %> Industry: 
+	<strong>Candidate:<%= user.id %> </strong>
+	Industry: 
 	<% for history in user.histories %>
-    <%= history.sector.name %>,
-	<% end -%>	
+    <span class="user_index_sector"><%= history.sector.name %></span>
+	<% end -%>
+	Experience:	
+	<table cellspacing=0>
 				<% for qualification in user.qualifications %>
-					<table cellspacing=0>
 						<tr class="<%= cycle('list-line-odd_user_index', 'list-line-even_user_index') %>">
 							<td width=80><%= qualification.body.name %></td>
 							<td width=20><%= qualification.level.level %></td>
@@ -15,8 +17,9 @@
 							<td width=150><%= qualification.category.name %></td>
 							<td><%= qualification.expire_date %></td>
 						</tr>
-					</table>	
+
 		<% end -%>
+		</table>
     <% if admin? %>
     <%= link_to 'Show', user %>
     <%= link_to 'Destroy', user, :confirm => 'Are you sure?', :method => :delete %>

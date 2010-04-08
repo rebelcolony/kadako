@@ -32,11 +32,16 @@ form p {
 	margin-left:10px;
 }
 
+.content_container img {
+	border:1px solid #000;
+}
+
+
 .clear {
 	clear:both;
 }
 
-.admin_links a{
+.admin_links a {
 	text-decoration:none;
 	border:1px solid #fff;
 	padding:1px;
@@ -222,6 +227,12 @@ p#footer_content a {
 	margin-left:20px;
 }
 
+#sign_up {
+	padding-top:40px;
+	padding-left:100px;
+
+}
+
 #admin_links {
 	margin-left:8px;
 	background:;
@@ -252,6 +263,8 @@ p#footer_content a {
 	width:389px;
 	background:#c6c6c6;
 	padding:7px;
+	-moz-border-radius:8px;
+	-webkit-border-radius:8px;
 }
 
 #posts a {
@@ -356,7 +369,9 @@ div.post a:hover {
 background-color: #f9ffb5;
 }
 
-
+#user_quals_table tr {
+	margin-bottom:5px;
+}
 
 .list-line-odd {
 	background:#CCC;
@@ -367,7 +382,7 @@ background-color: #f9ffb5;
 }
 
 .list-line-odd_user_index {
-	background:#DFE6C4;
+	background:#c6dae2;
 }
 
 .list-line-even_user_index {
@@ -395,7 +410,7 @@ h2.h2header {
 .history_box {
 	margin-top:7px;
 	background:;
-	padding:3px;
+	padding:0px;
 }
 
 .history_position {
@@ -407,9 +422,7 @@ h2.h2header {
 }
 
 .history {
-	background:#cdcdcd;
-	padding-left:3px;
-	padding-right:3px;	
+	background:#cdcdcd;	
 	padding-top:0px;
 }
 
@@ -422,12 +435,34 @@ h2.h2header {
 	margin-top:2px;
 }
 
+/*===USER-BIO==========================================================*/
+.bio_data {
+	margin-bottom:30px;
+
+}
+
+#user_bio_table {
+	margin-top:5px;
+}
+
+
 /*===USER-INDEX==========================================================*/
 .candidate_index_box {
 	background:#C6C6C6;
 	margin-top:5px;
+	padding:5px;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	
 }
 
+.user_index_sector {
+	border:1px solid #000;
+}
+
+.candidate_index_box table {
+	margin-top:5px;
+}
 
 /*===TERMS==========================================================*/
 

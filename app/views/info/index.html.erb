@@ -4,9 +4,15 @@
 		<p>KADAKO Labour cc is a company providing a labour broker service to qualified inspection personnel in the oil, gas, 
 				petrochemical, mining, power generation and aviation industry locally and international. Be it Non-Destructive Testing, 
 				Welding Inspection, Painting Inspection, Vessel Inspection or Plant Inspection. The site is open to all qualified individuals
-				who seek work opportunities locally or international and who wish to join our group and accept us as a labour brokers.</p>		
+				who seek work opportunities locally or internationally and who wish to join our group and accept us as a labour broker.</p>		
 		<p>The KADAKO group welcomes all qualified individuals.</p>
+		
+		<div id="sign_up">
+			<%= link_to image_tag("sign_up.gif"), new_user_path, :border => 0 %>
+		</div>
 	<!-- END #intro_blurb --></div>	
+	
+	
 	<div id="posts">
 		<% for post in @posts %>
 			<div class="post">
@@ -18,7 +24,10 @@
 						
 					<%= post.created_at.to_s(:long) %><br />
 					<%= auto_link truncate(post.body, :length => 270) %>
-					<span class="post_external_links"><%= auto_link truncate(post.original_article, :length => 50) %></span>
+					<span class="post_external_links">
+						<%= auto_link (post.original_article, :all, :target => '_blank')  %>					
+					</span>
+
 			<!-- END .post --></div>	
 		<% end -%>			
 		

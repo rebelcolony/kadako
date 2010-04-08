@@ -1,4 +1,4 @@
-<% form_for [@user, @qualification] do |f| %>
+<% form_for [@user, @qualification], :html => { :multipart => true } do |f| %>
 
   <%= f.error_messages %>
 
@@ -20,9 +20,12 @@
 	</p>
   <p>
     <%= f.label :expire_date %><br />
-    <%= f.date_select :expire_date %>
+    <%= f.date_select :expire_date, :start_year => 2009, :end_year => 2020, :order => [:day, :month, :year] %>
   </p>
-
+	<p>
+    <%= f.label :scan_copy %><br />
+    <%= f.file_field :cert %>
+	</p>
   <p>
     <%= f.submit 'Create qualification' %>
   </p>

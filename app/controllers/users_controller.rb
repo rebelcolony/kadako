@@ -42,7 +42,7 @@ end
     @user = User.find(params[:id])
     @user.destroy
     flash[:notice] = 'User was successfully destroyed.'
-    redirect_to(@user)
+    redirect_to root_url
   end
  
 end

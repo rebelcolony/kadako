@@ -9,7 +9,22 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100402075449) do
+ActiveRecord::Schema.define(:version => 20100406105844) do
+
+  create_table "bios", :force => true do |t|
+    t.string   "name"
+    t.date     "dob"
+    t.text     "address"
+    t.string   "passport_number"
+    t.date     "passport_expires"
+    t.string   "nationality"
+    t.string   "home_number"
+    t.string   "mobile_number"
+    t.string   "email"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "user_id"
+  end
 
   create_table "bodies", :force => true do |t|
     t.string   "name"
@@ -59,6 +74,10 @@ ActiveRecord::Schema.define(:version => 20100402075449) do
     t.integer  "technique_id"
     t.integer  "level_id"
     t.integer  "user_id"
+    t.string   "cert_file_name"
+    t.string   "cert_content_type"
+    t.integer  "cert_file_size"
+    t.datetime "cert_update_at"
   end
 
   create_table "sectors", :force => true do |t|
@@ -81,15 +100,33 @@ ActiveRecord::Schema.define(:version => 20100402075449) do
   end
 
   create_table "users", :force => true do |t|
-    t.string   "email",              :null => false
-    t.string   "crypted_password",   :null => false
-    t.string   "password_salt",      :null => false
-    t.string   "persistence_token",  :null => false
+    t.string   "email",                                 :null => false
+    t.string   "crypted_password",                      :null => false
+    t.string   "password_salt",                         :null => false
+    t.string   "persistence_token",                     :null => false
     t.integer  "login_count"
     t.integer  "failed_login_count"
     t.datetime "last_login_at"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "name"
+    t.date     "dob"
+    t.text     "address"
+    t.string   "passport_number"
+    t.date     "passport_expires"
+    t.string   "nationality"
+    t.string   "contact_email"
+    t.string   "home_phone"
+    t.string   "mobile_phone"
+    t.string   "headshot_file_name"
+    t.string   "headshot_content_type"
+    t.integer  "headshot_file_size"
+    t.datetime "headshot_updated_at"
+    t.string   "pcn_number"
+    t.string   "other_body_id"
+    t.string   "perishable_token",      :default => "", :null => false
   end
+
+  add_index "users", ["perishable_token"], :name => "index_users_on_perishable_token"
 
 end

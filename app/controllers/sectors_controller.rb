@@ -1,5 +1,5 @@
 class SectorsController < ApplicationController
-
+  before_filter :authorize
   def index
     @sectors = Sector.all
   end

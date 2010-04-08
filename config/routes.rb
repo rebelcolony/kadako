@@ -1,13 +1,10 @@
 ActionController::Routing::Routes.draw do |map|
-  
-  
-
-  
+ 
   map.resources :users do |user|
      user.resources :qualifications
      user.resources :histories
   end   
-  
+  map.resources :password_resets, :only => [ :new, :create, :edit, :update ]
   map.resources :sectors
   map.resources :categories
   map.resources :techniques

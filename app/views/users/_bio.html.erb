@@ -1,0 +1,55 @@
+	
+		<div class="bio_box">
+			<h2 class="h2header">Bio Data</h2>
+			<div class="bio_data">
+				<% if @user.headshot.exists? %>
+					<%= link_to image_tag(@user.headshot.url(:thumb)), @user.headshot.url(:medium), :class => "top_up", :border => nil %>
+				<% end -%>
+				<table id="user_bio_table", cellspacing="0", border="0", width="800px">
+					<tr class="<%= cycle('list-line-odd', 'list-line-even') %>">
+						<td>Full Name:</td>
+						<td><%= @user.name %></td>
+					</tr>
+					<tr class="<%= cycle('list-line-odd', 'list-line-even') %>">
+						<td>DOB:</td>
+						<td><%= @user.dob %></td>		
+					</tr>	
+					<tr class="<%= cycle('list-line-odd', 'list-line-even') %>">
+						<td>Address:</td>
+						<td><%= @user.address %></td>		
+					</tr>
+					<tr class="<%= cycle('list-line-odd', 'list-line-even') %>">
+						<td>Passport Number:</td>
+						<td><%= @user.passport_number %></td>		
+					</tr>
+					<tr class="<%= cycle('list-line-odd', 'list-line-even') %>">
+						<td>Passport Expires:</td>
+						<td><%= @user.passport_expires %></td>		
+					</tr>
+					<tr class="<%= cycle('list-line-odd', 'list-line-even') %>">
+						<td>Nationality:</td>
+						<td><%= @user.nationality %></td>		
+					</tr>
+					<tr class="<%= cycle('list-line-odd', 'list-line-even') %>">
+						<td>Contact Email:</td>
+						<td><%= auto_link @user.contact_email %></td>		
+					</tr>
+					<tr class="<%= cycle('list-line-odd', 'list-line-even') %>">
+						<td>Home Phone:</td>
+						<td><%= @user.home_phone %></td>		
+					</tr>
+					<tr class="<%= cycle('list-line-odd', 'list-line-even') %>">
+						<td>Mobile Phone:</td>
+						<td><%= @user.mobile_phone %></td>		
+					</tr>
+					<tr class="<%= cycle('list-line-odd', 'list-line-even') %>">
+						<td>PCN Number:</td>
+						<td><%= @user.pcn_number %></td>		
+					</tr>
+					<tr class="<%= cycle('list-line-odd', 'list-line-even') %>">
+						<td>Other Governing Body ID:</td>
+						<td><%= @user.other_body_id %></td>		
+					</tr>
+				</table>				
+			<!--END .bio_data --></div>	
+		<!--END .bio_box --></div>	

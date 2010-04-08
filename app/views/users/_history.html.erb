@@ -1,0 +1,22 @@
+	
+		<div class="history_box">
+			<h2 class="h2header">Work History</h2>
+			<% for history in @user.histories %>
+				<div class="history">
+					<div class="history_date">
+						<h3><%= history.company %><br />
+								<%= history.position %><br />
+								<%= history.start %> to <%= history.end %>
+								<span class="history_sector"><%= history.sector.name %></span> 
+							<span class="admin_links"><%= link_to 'Edit', edit_user_history_path(@user, history) %> 
+							<%= link_to 'Destroy', [@user, history], :method => :delete, :confirm => "Are you sure?" %></h3>
+					<!-- END .history_date--></div>
+					<div class="history_description">
+						<strong>Description:</strong>
+						<%= history.description %><br />
+						<strong>Equipment:</strong>
+						<%= history.equipment %>	
+					<!-- END .history_description --></div>	
+				<!-- END .history --></div>
+			<% end -%>
+		<!-- END .history_box --></div>	

@@ -1,5 +1,5 @@
 class LevelsController < ApplicationController
- 
+   before_filter :authorize
   def index
     @levels = Level.all
   end

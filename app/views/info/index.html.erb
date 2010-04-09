@@ -25,7 +25,7 @@
 					<%= post.created_at.to_s(:long) %><br />
 					<%= auto_link truncate(post.body, :length => 270) %>
 					<span class="post_external_links">
-						<%= auto_link (post.original_article, :all, :target => '_blank')  %>					
+						<%= auto_link(post.original_article, :all, :target => '_blank')  %>					
 					</span>
 
 			<!-- END .post --></div>	

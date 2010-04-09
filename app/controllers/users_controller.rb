@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
 
-  before_filter :authorize, :except => [:index, :new]
+  before_filter :authorize, :except => [:index, :new, :create]
 
   def index
     @users = User.all
@@ -19,7 +19,7 @@ class UsersController < ApplicationController
     if @user.save
       flash[:notice] = "Registration successfull"
       Notifications.deliver_registration_confirmation(@user)
-      redirect_to root_url
+      redirect_to(@user)
     else
       render :action => "new"
     end
@@ -29,6 +29,7 @@ class UsersController < ApplicationController
   # Using current_user from admin doesnt work
   # you could do something like below, if you want to avoid another controller.
   def edit
+    current_or_find_user
   end
 
   def update

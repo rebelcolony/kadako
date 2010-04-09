@@ -22,7 +22,6 @@
 		</table>
     <% if admin? %>
     <%= link_to 'Show', user %>
-    <%= link_to "Edit", edit_user_url(user) %>
     <%= link_to 'Destroy', user, :confirm => 'Are you sure?', :method => :delete %>
 		<% end -%>	
   </div>

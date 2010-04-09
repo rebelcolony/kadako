@@ -1,8 +1,6 @@
 class UsersController < ApplicationController
-  
 
-
-  before_filter :current_or_find_user, :only => [:edit, :update]
+  before_filter :authorize, :except => :index
 
   def index
     @users = User.all

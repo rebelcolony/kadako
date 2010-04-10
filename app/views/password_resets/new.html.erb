@@ -1,8 +1,16 @@
-<h2>Reset Password</h2>
-<p>Please fill in your email address below.</p>
-	<% form_tag password_resets_path do %>
-	  <label>Email:</label><br />
-	  <%= text_field_tag "email" %><br />
-	  <br />
-	  <%= submit_tag "Reset my password" %>
-	<% end %>
+<div class="content_container">
+	<div id="password_reset_new">
+	<h2>Password Reset</h2>
+	<div class="sign_up_help">
+		Please fill in your email address below and we'll send you a reset password link.
+	</div>
+	<div id="password_reset_new_form">
+		<% form_tag password_resets_path do %>
+	  	<label>Email:</label><br />
+	  	<%= text_field_tag "email" %><br />
+	  	<br />
+	  	<%= submit_tag "Reset my password" %>
+		<% end %>
+	<!-- END #password_reset_new_form --></div>	
+	<!-- END #password_reset_new>--></div>
+<!-- END .content_container --></div>	

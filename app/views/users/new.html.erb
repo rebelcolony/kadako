@@ -1,22 +1,29 @@
-<h2>Sign-up to submit your details</h2>
 <div class="content_container">
-<% form_for @user, :html => { :multipart => true } do |f| %>
-  <%= f.error_messages %>
-
-  <p>
-    <%= f.label :email %><br />
-    <%= f.text_field :email, :size => 30 %>
-  </p>
-  <p>
-    <%= f.label :password %><br />
-    <%= f.password_field :password %>
-  </p>
-	<p>
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation %>
-  </p>
-  <p>
-    <%= f.submit 'Submit' %>
-  </p>
-<% end -%>	
-</div>
+	<div id="sign_up_container">
+	<h2>Sign-up to submit your details</h2>
+	<div class="sign_up_help">
+		Create your online employment profile and have your details added to our personnel
+		 database to be viewed by potential employers worldwide.
+	</div>	
+	<div id="sign_up_form">	
+		<% form_for @user, :html => { :multipart => true } do |f| %>
+  	<%= f.error_messages %>
+    <p>
+    	<%= f.label :email %><br />
+    	<%= f.text_field :email, :size => 30 %>
+  	</p>
+  	<p>
+    	<%= f.label :password %><br />
+    	<%= f.password_field :password %>
+  	</p>
+		<p>
+    	<%= f.label :password_confirmation %><br />
+    	<%= f.password_field :password_confirmation %>
+  	</p>
+ 		<p>
+    	<%= f.submit 'Sign-up' %>
+  	</p>
+		<% end -%>	
+	<!-- END #sign_up_form --></div>
+	</div>
+<!-- END .content_container --></div>

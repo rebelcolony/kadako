@@ -1,25 +1,31 @@
-<% form_for(:contact, :url => contact_path) do |form| %>
-  <p>
-    <%= form.label :subject %><br />
-    <%= form.text_field :subject %>
-  </p>
-
-  <p>
-    <%= form.label :name %><br />
-    <%= form.text_field :name %>
-  </p>
-
-  <p>
-    <%= form.label :email %><br />
-    <%= form.text_field :email %>
-  </p>
-
-  <p>
-    <%= form.label :body %><br />
-    <%= form.text_area :body %>
-  </p>
-
-  <p>
-    <%= form.submit "Send this message" %>
-  </p>
-<% end %>
+<div class="content_container">
+	<div id="contact_container">
+		<h2>Contact form</h2>
+		<div class="sign_up_help">
+			Please use this form to send us a message with any questions or enquires about our personnel.
+		<!-- END .sign_up_help --></div>	
+		<div id="contact_form">
+			<% form_for(:contact, :url => contact_path) do |form| %>
+  		<p>
+    		<%= form.label :subject %><br />
+    		<%= form.text_field :subject %>
+  		</p>
+  		<p>
+    		<%= form.label :name %><br />
+    		<%= form.text_field :name %>
+  		</p>
+  		<p>
+    		<%= form.label :email %><br />
+    		<%= form.text_field :email %>
+  		</p>
+  		<p>
+    		<%= form.label :body %><br />
+    		<%= form.text_area :body %>
+  		</p>
+  		<p>
+    		<%= form.submit "Send this message" %>
+  		</p>
+			<% end %>
+		<!-- END #contact_form--><div>	
+	<!-- END #contact_container --></div>
+<!-- END .content_container --></div>

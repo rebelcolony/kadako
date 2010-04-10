@@ -88,7 +88,7 @@ body {
 
 #nav {
 	background: url(../images/nav.gif) no-repeat;
-	width:479px;
+	width:525px;
 	height:30px;
 	margin: 0;
 	padding: 0;
@@ -122,9 +122,6 @@ body {
 	background: url(../images/nav.gif) 0 -60px no-repeat;
 }
 
-#home.selected {
-	background: url(../images/nav.gif) 0 -30px no-repeat;
-}
 
 #search {
 	width: 151px;
@@ -139,7 +136,7 @@ body {
 }
 
 #profile {
-	width: 125px;
+	width: 156px;
 }
 
 #profile a:hover {
@@ -151,28 +148,28 @@ body {
 }
 
 #login {
-	width: 60px;
+	width: 69px;
 }
 
 #login a:hover {
-	background: url(../images/nav.gif) -340px -30px no-repeat;
+	background: url(../images/nav.gif) -371px -30px no-repeat;
 }
 
 #login a:active {
-	background: url(../images/nav.gif) -340px -60px no-repeat;
+	background: url(../images/nav.gif) -371px -60px no-repeat;
 }
 
 
 #contact {
-	width: 79px;
+	width: 84px;
 }
 
 #contact a:hover {
-	background: url(../images/nav.gif) -400px -30px no-repeat;
+	background: url(../images/nav.gif) -440px -30px no-repeat;
 }
 
 #contact a:active {
-	background: url(../images/nav.gif) -400px -60px no-repeat;
+	background: url(../images/nav.gif) -440px -60px no-repeat;
 }
 
 /*===CONTENT==========================================================*/
@@ -464,6 +461,13 @@ h2.h2header {
 	margin-top:5px;
 }
 
+.help {
+	background:#FFF065;
+	border: 1px solid #FFD025;
+	padding-right:3px;
+	padding-left:3px;	
+}
+
 /*===TERMS==========================================================*/
 
 
@@ -472,6 +476,104 @@ h2.h2header {
 	margin-top:20px;
 }
 
+/*===SIGN-UP==========================================================*/
+#sign_up_form {
+	width:400px;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	background: url(../images/sign_up_bg2.gif) no-repeat #fff;
+	padding:20px;
+	border:1px solid #B4B4B4;
+	margin-right:auto;
+	margin-left:auto;
+	
+}
+
+.sign_up_help {
+	width:430px;
+	background:#FFF065;
+	border: 1px solid #FFD025;
+	padding-right:3px;
+	padding-left:3px;
+	margin-right:auto;
+	margin-left:auto;
+}
+
+#sign_up_container {
+	width:450px;
+	margin-right:auto;
+	margin-left:auto;
+}
+
+#sign_up_container h2 {
+	margin-left:7px;
+}
+
+#login_container {
+	width:450px;
+	margin-right:auto;
+	margin-left:auto;
+}
+
+#login_container h2 {
+	margin-left:7px;
+}
+
+#login_form {
+	width:400px;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	background: url(../images/sign_up_bg2.gif) no-repeat #fff;
+	padding:20px;
+	border:1px solid #B4B4B4;
+	margin-right:auto;
+	margin-left:auto;
+	
+}
+
+#password_reset_new {
+	width:450px;
+	margin-right:auto;
+	margin-left:auto;
+}
+
+#password_reset_new_form {
+	width:400px;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	background: url(../images/sign_up_bg2.gif) no-repeat #fff;
+	padding:20px;
+	border:1px solid #B4B4B4;
+	margin-right:auto;
+	margin-left:auto;
+	
+}
+
+#password_reset_new h2 {
+	margin-left:7px;
+}
+
+#contact_container {
+	width:450px;
+	margin-right:auto;
+	margin-left:auto;
+}
+
+#contact_form {
+	width:400px;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	background: url(../images/contact_bg.gif) no-repeat #fff;
+	padding:20px;
+	border:1px solid #B4B4B4;
+	margin-right:auto;
+	margin-left:auto;
+	
+}
+
+#contact_container h2 {
+	margin-left:7px;
+}
 
 /*===ERRORS==========================================================*/
 .fieldWithErrors {

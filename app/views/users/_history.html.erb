@@ -1,22 +1,26 @@
-	
+	<h2 class="h2header">Work History</h2><span class="admin_links"> <%= link_to "New work history", new_user_history_path(@user) %></span>
 		<div class="history_box">
-			<h2 class="h2header">Work History</h2>
 			<% for history in @user.histories %>
 				<div class="history">
 					<div class="history_date">
-						<h3><%= history.company %><br />
-								<%= history.position %><br />
-								<%= history.start %> to <%= history.end %>
-								<span class="history_sector"><%= history.sector.name %></span> 
+						<h3><%= history.company %></h3>
+						<%= history.position %><br />
+						<%= history.start.strftime("%B %Y")  %> to <%= history.end.strftime("%B %Y")  %>
+						<% @time = (history.end.month - history.start.month) + (12 * (history.end.year - history.start.year)) %>
+						<% @experience = @time / 12.0 %>
+						(<%= @experience.round(1).to_f %> Years)<br />
+							<span class="history_sector"><%= history.sector.name %></span>
 							<span class="admin_links"><%= link_to 'Edit', edit_user_history_path(@user, history) %> 
-							<%= link_to 'Destroy', [@user, history], :method => :delete, :confirm => "Are you sure?" %></h3>
+							<%= link_to 'Destroy', [@user, history], :method => :delete, :confirm => "Are you sure?" %>
 					<!-- END .history_date--></div>
 					<div class="history_description">
-						<strong>Description:</strong>
-						<%= history.description %><br />
-						<strong>Equipment:</strong>
+						<h4>Description:</h4>
+						<%= history.description %>
+						<h4>Equipment:</h4>
 						<%= history.equipment %>	
+						
 					<!-- END .history_description --></div>	
 				<!-- END .history --></div>
 			<% end -%>
-		<!-- END .history_box --></div>	
+		<!-- END .history_box --></div>
+		

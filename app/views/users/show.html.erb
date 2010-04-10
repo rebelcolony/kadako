@@ -1,12 +1,5 @@
 <div class="content_container">
 	<h3><%= @user.email %></h3>
-	<div id="user_nav">
-		<% if current_user %>
-			<%= link_to "Edit account details", edit_user_path(:current) %>
-			<% end -%>
-		<%= link_to "New qualification", new_user_qualification_path(@user) %>
-		<%= link_to "New work history", new_user_history_path(@user) %>
-	<!-- END #user_nav --></div>
 	<%= render :partial => 'bio' %>
 	<%= render :partial => 'quals' %>
 	<%= render :partial => 'history' %>

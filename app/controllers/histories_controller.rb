@@ -2,6 +2,7 @@ class HistoriesController < ApplicationController
   before_filter :get_user
 
 
+
   def show
     @history = @user.histories.find(params[:id])
   end

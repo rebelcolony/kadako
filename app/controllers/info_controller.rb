@@ -6,4 +6,6 @@ class InfoController < ApplicationController
   def terms
   end
   
+  
+  
 end

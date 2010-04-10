@@ -1,6 +1,8 @@
-	
+	<h2 class="h2header">Bio - Personal Details</h2>	<% if current_user %>
+			<span class="admin_links"><%= link_to "Edit personal details", edit_user_path(:current) %></span>
+			<% end -%>
 		<div class="bio_box">
-			<h2 class="h2header">Bio Data</h2>
+			
 			<div class="bio_data">
 				<% if @user.headshot.exists? %>
 					<%= link_to image_tag(@user.headshot.url(:thumb)), @user.headshot.url(:medium), :class => "top_up", :border => nil %>

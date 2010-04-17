@@ -2,7 +2,7 @@ class CategoriesController < ApplicationController
   before_filter :authorize
   
   def index
-    @categories = Category.all
+    @categories = Category.find(:all, :order => "name ASC")
   end
 
 

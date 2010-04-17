@@ -9,4 +9,14 @@ class User < ActiveRecord::Base
     Notifications.deliver_password_reset_instructions(self)
   end
 
+
+  def work_experience
+    for history in @user.histories
+		  @time = (history.end.month - history.start.month) + (12 * (history.end.year - history.start.year))
+		  @experience = @time / 12.0
+		  @experience.round(1).to_f
+	    total_experience += @experience
+	  end
+    @work_experience = total_experience
+  end
 end

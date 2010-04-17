@@ -4,19 +4,29 @@
 	</div>	
 
 <% for user in @users %>
+<% total_experience = 0 -%>
   <div class="candidate_index_box">
 	<strong>Candidate:<%= user.id %> </strong>
 	Industry: 
 	<% for history in user.histories %>
     <span class="user_index_sector"><%= history.sector.name %></span>
 	<% end -%>
-	Experience:	
+	<% for history in user.histories %>
+		<% @time = (history.end.month - history.start.month) + (12 * (history.end.year - history.start.year)) -%>
+		<% @experience = @time / 12.0 -%>
+		<% @experience.round(1).to_f -%>
+		<% total_experience += @experience -%>
+		<% @work_experience = total_experience %>
+	<% end -%>
+	<% if user.histories.exists? %>
+		<%= "Years Experience:#{@work_experience.round(1)}" %>
+	<% end -%>
 	<table cellspacing=0>
 				<% for qualification in user.qualifications %>
 						<tr class="<%= cycle('list-line-odd_user_index', 'list-line-even_user_index') %>">
 							<td width=80><%= qualification.body.name %></td>
 							<td width=20><%= qualification.level.level %></td>
-							<td width=150><%= qualification.technique.name %></td>
+							<td width=200><%= qualification.technique.name %></td>
 							<td width=150><%= qualification.category.name %></td>
 							<td><%= qualification.expire_date %></td>
 						</tr>

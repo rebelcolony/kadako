@@ -15,6 +15,12 @@ form p {
 	margin-top:5px;
 }
 
+hr {
+	color:#cdcdcd;
+	margin-top:10px;
+	border:1px solid #cdcdcd;
+}
+
 /*===CLASS STYLES==========================================================*/
 .content_container {
 	padding:10px;
@@ -206,14 +212,43 @@ body {
 
 }
 p#footer_content {
-	margin-left:300px;
+	margin-left:170px;
 	font-size:0.9em;
 	color:#000;
 	padding-top:8px;
+	width:370px;
+	float:left;
 }
 
 p#footer_content a {
 	color:#000;
+}
+
+#rc {
+	width:200px;
+	float:right;
+	margin-right:180px;
+	padding-top:5px;
+}
+
+#rc_logo {
+	width:135px;
+	background:url(../images/footer_rclogo.png) no-repeat;
+	height:18px;
+}
+
+#rc_logo a {
+	display:block;
+	height:18px;
+	overflow:hidden;
+}
+
+#rc_logo a:hover {
+	background: url(../images/footer_rclogo.png) no-repeat 0px -23px 
+}
+
+.rc_text {
+	margin-left:20px;
 }
 
 /*===HOME INDEX==========================================================*/

@@ -2,7 +2,7 @@ class BodiesController < ApplicationController
   before_filter :authorize
 
   def index
-    @bodies = Body.all
+    @bodies = Body.find(:all, :order => "name ASC")
   end
   
   def new

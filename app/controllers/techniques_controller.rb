@@ -2,7 +2,7 @@ class TechniquesController < ApplicationController
   before_filter :authorize
   
   def index
-    @techniques = Technique.all
+    @techniques = Technique.find(:all, :order => "name ASC")
   end
 
   def new

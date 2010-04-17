@@ -1,15 +1,22 @@
 	<h2 class="h2header">Work History</h2><span class="admin_links"> <%= link_to "New work history", new_user_history_path(@user) %></span>
+
 		<div class="history_box">
+			<% total_experience = 0 -%>
+			
 			<% for history in @user.histories %>
 				<div class="history">
 					<div class="history_date">
 						<h3><%= history.company %></h3>
 						<%= history.position %><br />
-						<%= history.start.strftime("%B %Y")  %> to <%= history.end.strftime("%B %Y")  %>
-						<% @time = (history.end.month - history.start.month) + (12 * (history.end.year - history.start.year)) %>
-						<% @experience = @time / 12.0 %>
-						(<%= @experience.round(1).to_f %> Years)<br />
-							<span class="history_sector"><%= history.sector.name %></span>
+						
+						<%= "#{history.start.strftime("%B %Y")} to #{history.end.strftime("%B %Y")}" %>
+						<% @time = (history.end.month - history.start.month) + (12 * (history.end.year - history.start.year)) -%>
+						<% @experience = @time / 12.0 -%>
+						(<%= @experience.round(1).to_f -%> Years)<br />
+						<% total_experience += @experience -%>
+						<% @work_experience = total_experience %>
+	
+							<%= history.sector.name %>
 							<span class="admin_links"><%= link_to 'Edit', edit_user_history_path(@user, history) %> 
 							<%= link_to 'Destroy', [@user, history], :method => :delete, :confirm => "Are you sure?" %>
 					<!-- END .history_date--></div>
@@ -21,6 +28,10 @@
 						
 					<!-- END .history_description --></div>	
 				<!-- END .history --></div>
+				<hr />
 			<% end -%>
+			
 		<!-- END .history_box --></div>
+		
+		
 		

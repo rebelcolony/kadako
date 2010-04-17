@@ -1,7 +1,7 @@
 class SectorsController < ApplicationController
   before_filter :authorize
   def index
-    @sectors = Sector.all
+    @sectors = Sector.find(:all, :order => "name ASC")
   end
 
   def show

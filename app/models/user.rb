@@ -4,7 +4,7 @@ class User < ActiveRecord::Base
   has_many :histories
   has_attached_file :headshot, :styles => { :medium => "300x300>", :thumb => "100x100>" }
   validates_attachment_content_type :headshot, :content_type => ['image/jpg', 'image/jpeg', 'image/png', 'image/gif']
-  validates_attachment_size :headshot, :less_than => 1.megabyte
+  validates_attachment_size :headshot, :less_than => 1.megabyte, :message => "must be smaller than 1MB"
   
   
   def deliver_password_reset_instructions!

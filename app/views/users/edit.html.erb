@@ -1,6 +1,6 @@
 
 <div class="content_container">
-<% form_for @user, :url => user_path, :html => { :multipart => true } do |f| %>
+<% form_for @user, :html => { :multipart => true } do |f| %>
   <%= f.error_messages %>
 		<div id="user_edit_account_details">
   		<h2>Edit your account details</h2>
@@ -24,6 +24,7 @@
 	    <%= f.text_field :name, :size => 30 %>
 	
 	    <h3>Upload a clear image of your face:</h3>
+			Must be .jpg, .png or .gif file format and less than 1MB
 			<%= f.file_field :headshot %>
 		
 	    <h3>Date of Birth:</h3>

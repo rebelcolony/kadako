@@ -265,6 +265,11 @@ p#footer_content a {
 
 }
 
+#sign_up a:hover {
+	background-color:#dfdfdf;
+
+}
+
 #admin_links {
 	margin-left:8px;
 	background:;
@@ -498,6 +503,39 @@ h2.h2header {
 }
 
 
+/*===USER-ACCOUNT==========================================================*/
+#user_edit_account_details {
+	border: 1px solid #999;
+	width:225px;
+	padding:10px;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	background:#fff;
+	float:left;
+}
+
+.user_edit_account_details_help {
+	width:220px;
+	background:#FFF065;
+	border: 1px solid #FFD025;
+	padding-right:1px;
+	padding-left:1px;
+	margin-right:auto;
+	margin-left:auto;
+}
+
+#user_edit_personal_details {
+	float:right;
+	width:400px;
+	border: 1px solid #999;
+	padding:10px;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	background:#fff;
+	margin-right:50px;
+}	
+
+
 /*===USER-INDEX==========================================================*/
 .candidate_index_box {
 	background:#C6C6C6;
@@ -510,6 +548,8 @@ h2.h2header {
 
 .user_index_sector {
 	border:1px solid #000;
+	padding-left:2px;
+	padding-right:2px;	
 }
 
 .candidate_index_box table {
@@ -521,6 +561,10 @@ h2.h2header {
 	border: 1px solid #FFD025;
 	padding-right:3px;
 	padding-left:3px;	
+}
+
+.user_index_header {
+	margin-bottom:3px;
 }
 
 /*===TERMS==========================================================*/

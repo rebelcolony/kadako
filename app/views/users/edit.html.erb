@@ -1,79 +1,66 @@
-<h2>Edit your account details</h2>
+
 <div class="content_container">
-<% form_for @user, :html => { :multipart => true } do |f| %>
+<% form_for @user, :url => user_path, :html => { :multipart => true } do |f| %>
   <%= f.error_messages %>
-
-  <p>
-    <%= f.label :email %><br />
-    <%= f.text_field :email, :size => 30 %>
-  </p>
-  <p>
-    <%= f.label :password %><br />
-    <%= f.password_field :password %>
-  </p>
-	<p>
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation %>
-  </p>
-  <p>
-    <%= f.submit 'Submit' %>
-  </p>
-
-	<!-- PERSONAL DETAILS -->
-	
-		<p>
-	    <%= f.label :name %><br />
+		<div id="user_edit_account_details">
+  		<h2>Edit your account details</h2>
+			<div class="user_edit_account_details_help">
+			Only use this form to change your email or password
+			</div>
+    	<h3>Your email address:</h3>
+    	<%= f.text_field :email, :size => 30 %>
+			<h3>Your account password:</h3>
+    	<%= f.password_field :password %>
+			<h3>Confirm your account password:</h3>
+    	<%= f.password_field :password_confirmation %>
+  		<p>
+    	<%= f.submit 'Update your email or password' %>
+  		</p>
+		<!-- END #user_edit_account_details --></div>
+		
+		<div id="user_edit_personal_details">	
+			<h2>Edit your personal details</h2>
+			<h3>Your full name:</h3>
 	    <%= f.text_field :name, :size => 30 %>
-	  </p>
-		<p>
+	
 	    <h3>Upload a clear image of your face:</h3>
 			<%= f.file_field :headshot %>
-		</p>	
-		<p>
+		
 	    <h3>Date of Birth:</h3>
 	    <%= f.date_select :dob, :start_year => 1945, :end_year => 2000, :order => [:day, :month, :year] %>
-	  </p>
-		<p>
-	    <%= f.label :address %><br />
+	  
+			<h3>Full address:</h3>
 	    <%= f.text_area :address %>
-	  </p>
-		<p>
-	    <%= f.label :pcn_number %><br />
+	  
+	    <h3>PCN number:</h3>
 	    <%= f.text_field :pcn_number, :size => 30 %>
-	  </p>
-		<p>
-	    <%= f.label :other_body_id %><br />
+	  
+	    <h3>Other governing body ID number:</h3>
 	    <%= f.text_field :other_body_id, :size => 30 %>
-	  </p>
-		<p>
-	    <%= f.label :passport_number %><br />
+	  
+	    <h3>Passport number:</h3>
 	    <%= f.text_field :passport_number, :size => 30 %>
-	  </p>
-		<p>
-	    <%= f.label :passport_expires %><br />
+	   	
+	 		<h3>Passport expiry date:</h3>
 	    <%= f.date_select :passport_expires, :start_year => 2009, :end_year => 2030, :order => [:day, :month, :year] %>
-	  </p>
-		<p>
-	    <%= f.label :nationality %><br />
+	  
+	    <h3>Nationality:</h3>
 	    <%= f.text_field :nationality, :size => 30 %>
-	  </p>
-		<p>
-	    <%= f.label :contact_email %><br />
+	  
+	    <h3>Alternative email:</h3>
 	    <%= f.text_field :contact_email, :size => 30 %>
-	  </p>
-		<p>
-	    <%= f.label :home_phone %><br />
+	  
+	    <h3>Home phone:</h3>
 	    <%= f.text_field :home_phone, :size => 30 %>
-	  </p>
-		<p>
-	    <%= f.label :mobile_phone %><br />
+	  
+	    <h3>Mobile phone:</h3>
 	    <%= f.text_field :mobile_phone, :size => 30 %>
-	  </p>
-
-	 <p>
+			<p>
 	    <%= f.submit 'Submit' %>
-	  </p>
+	  	</p>
+		</div>
 	<% end %>
+	<div class="clear"></div>
 	<!-- END .content_container--></div>
 
 

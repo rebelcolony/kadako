@@ -1,12 +1,12 @@
 
 	<div class="help">
-		Employers and management agencies can use this section to see all the inspection personnel that we have with their qualifications and years experience in their industry. Please just contact us with the candidate id number to find out more information.
+		This section can be used to view all inspection personnel. Please just contact us with the candidate number to find out more information.
 	</div>	
 
 <% for user in @users %>
 <% total_experience = 0 -%>
   <div class="candidate_index_box">
-	<strong>Candidate:<%= user.id %> </strong>
+	<h4 class="user_index_header">Candidate: <%= user.id %></h4>
 	Industry: 
 	<% for history in user.histories %>
     <span class="user_index_sector"><%= history.sector.name %></span>

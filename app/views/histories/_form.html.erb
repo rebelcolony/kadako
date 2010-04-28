@@ -1,6 +1,8 @@
 <% form_for [@user, @history] do |f| %>
   <%= f.error_messages %>
-
+	<div class="history_help">
+		Create a separate work history for every different company you have worked for.
+	</div>	
   <p>
     <%= f.label :start %><br />
     <%= f.date_select :start, :discard_day => true, :start_year => 1945, :end_year => 2020, :order => [:day, :month, :year] %>

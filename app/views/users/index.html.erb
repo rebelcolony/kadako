@@ -24,11 +24,11 @@
 	<table cellspacing=0>
 				<% for qualification in user.qualifications %>
 						<tr class="<%= cycle('list-line-odd_user_index', 'list-line-even_user_index') %>">
-							<td width=80><%= qualification.body.name %></td>
+							<td width=120><%= qualification.body.name %></td>
 							<td width=20><%= qualification.level.level %></td>
 							<td width=200><%= qualification.technique.name %></td>
-							<td width=150><%= qualification.category.name %></td>
-							<td><%= qualification.expire_date %></td>
+							<td width=200><%= qualification.category.name %></td>
+							<td><%= qualification.expire_date.strftime(" %d %B %Y") %></td>
 						</tr>
 
 		<% end -%>

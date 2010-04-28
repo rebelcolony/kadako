@@ -485,6 +485,14 @@ h2.h2header {
 	margin-top:2px;
 }
 
+.history_help {
+	width:500px;
+	background:#FFF065;
+	border: 1px solid #FFD025;
+	padding-right:3px;
+	padding-left:3px;
+}
+
 /*===USER-BIO==========================================================*/
 .bio_data {
 	margin-bottom:30px;

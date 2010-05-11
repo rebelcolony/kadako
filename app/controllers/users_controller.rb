@@ -32,8 +32,10 @@ class UsersController < ApplicationController
     current_or_find_user
   end
 
+
   def update
-    if current_user.update_attributes(params[:user])
+    @user = @current_user
+    if @user.update_attributes(params[:user])
       flash[:notice] = "Your account details have been successfully updated"
       redirect_to current_user
     else

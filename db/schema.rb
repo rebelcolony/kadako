@@ -11,21 +11,6 @@
 
 ActiveRecord::Schema.define(:version => 20100406105844) do
 
-  create_table "bios", :force => true do |t|
-    t.string   "name"
-    t.date     "dob"
-    t.text     "address"
-    t.string   "passport_number"
-    t.date     "passport_expires"
-    t.string   "nationality"
-    t.string   "home_number"
-    t.string   "mobile_number"
-    t.string   "email"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.integer  "user_id"
-  end
-
   create_table "bodies", :force => true do |t|
     t.string   "name"
     t.datetime "created_at"

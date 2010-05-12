@@ -9,7 +9,7 @@
 	<h4 class="user_index_header">Candidate: <%= user.id %></h4>
 	Industry: 
 	<% for history in user.histories %>
-    <span class="user_index_sector"><%= history.sector.name %></span>
+    <!-- <span class="user_index_sector"><%= history.sector.name %></span> -->
 	<% end -%>
 	<% for history in user.histories %>
 		<% @time = (history.end.month - history.start.month) + (12 * (history.end.year - history.start.year)) -%>

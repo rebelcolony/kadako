@@ -616,6 +616,7 @@ h2.h2header {
 	margin-left:7px;
 }
 
+/*===LOGIN==========================================================*/
 #login_container {
 	width:450px;
 	margin-right:auto;
@@ -638,6 +639,7 @@ h2.h2header {
 	
 }
 
+/*===PASSWORDS==========================================================*/
 #password_reset_new {
 	width:450px;
 	margin-right:auto;
@@ -666,6 +668,30 @@ h2.h2header {
 	margin-left:auto;
 }
 
+/*===QUALS FORM==========================================================*/
+#quals_form {
+width:400px;
+-moz-border-radius:6px;
+-webkit-border-radius:6px;
+background: url(../images/qual_form_bg.gif) no-repeat #fff;
+padding:20px;
+border:1px solid #B4B4B4;
+margin-right:auto;
+margin-left:auto;
+}
+
+h2.qual_form_h2 {
+	margin:250px;
+}
+
+#qual_container {
+	margin-right:auto;
+	margin-left:auto;
+	width:400px;
+}
+
+
+/*===CONTACT FORM==========================================================*/
 #contact_form {
 	width:400px;
 	-moz-border-radius:6px;

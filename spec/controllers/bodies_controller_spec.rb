@@ -14,13 +14,6 @@ describe BodiesController do
     end
   end
 
-  describe "GET show" do
-    it "assigns the requested body as @body" do
-      Body.stub!(:find).with("37").and_return(mock_body)
-      get :show, :id => "37"
-      assigns[:body].should equal(mock_body)
-    end
-  end
 
   describe "GET new" do
     it "assigns a new body as @body" do

@@ -1,3 +1,8 @@
+
+<div class="sign_up_help">
+	Create each of your qualifications here
+</div>
+<div id="quals_form">
 <% form_for [@user, @qualification], :html => { :multipart => true } do |f| %>
 
   <%= f.error_messages %>
@@ -23,10 +28,11 @@
     <%= f.date_select :expire_date, :start_year => 2009, :end_year => 2020, :order => [:day, :month, :year] %>
   </p>
 	<p>
-    <%= f.label :scan_copy %><br />
+    Upload a scanned copy of your cert, must be in .jpg, .png or .gif and be less than 1MB<br />
     <%= f.file_field :cert %>
 	</p>
   <p>
     <%= f.submit 'Create qualification' %>
   </p>
 <% end %>
+</div>

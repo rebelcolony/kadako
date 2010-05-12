@@ -3,7 +3,7 @@
 		<div class="history_box">
 			<% total_experience = 0 -%>
 			
-			<% for history in @user.histories %>
+			<% for history in @user.histories.find(:all, :order => "start DESC") %>
 				<div class="history">
 					<div class="history_date">
 						<h3><%= history.company %></h3>

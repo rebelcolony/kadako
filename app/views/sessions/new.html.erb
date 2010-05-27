@@ -1,5 +1,6 @@
 <div id="password">
 	<% form_tag sessions_path do %>
   	<h3>Enter your password:<%= password_field_tag :password %></h3>
+		<%= submit_tag "login", :id => "submit_button" %>
 	<% end -%>
 </div>

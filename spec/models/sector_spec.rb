@@ -10,4 +10,10 @@ describe Sector do
   it "should create a new instance given valid attributes" do
     Sector.create!(@valid_attributes)
   end
+  
+  it "should fail when name is missing" do
+    @valid_attributes.delete(:name)
+    lambda { @sector = Sector.create!(@valid_attributes) }.should raise_error(ActiveRecord::RecordInvalid)
+  end
+  
 end

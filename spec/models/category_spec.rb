@@ -10,4 +10,9 @@ describe Category do
   it "should create a new instance given valid attributes" do
     Category.create!(@valid_attributes)
   end
+  
+  it "should fail when name is missing" do
+    @valid_attributes.delete(:name)
+    lambda { @category = Category.create!(@valid_attributes) }.should raise_error(ActiveRecord::RecordInvalid)
+  end
 end

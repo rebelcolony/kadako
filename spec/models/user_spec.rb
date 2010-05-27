@@ -3,8 +3,9 @@ require 'spec_helper'
 describe User do
   before(:each) do
     @valid_attributes = {
-      :email => "value for email",
-      :password => "value for password"
+      :email => "kev@hotmail.com",
+      :password => "123456",
+      :password_confirmation => "123456"
     }
   end
 

@@ -581,6 +581,12 @@ h2.h2header {
 /*===LOGIN-LOGOUT==========================================================*/
 #password {
 	margin-top:20px;
+	margin-left:5px;
+}
+
+#submit_button {
+	margin-top:5px;
+	margin-left:148px;
 }
 
 /*===SIGN-UP==========================================================*/

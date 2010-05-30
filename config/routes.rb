@@ -13,6 +13,7 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :posts
   map.resources :sessions
   map.resources :levels
+  map.resources :searches
   
   map.with_options :controller => 'contact' do |contact|
     contact.contact '/contact',

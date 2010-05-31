@@ -3,9 +3,10 @@ development:
   encoding: utf8
   reconnect: false
   database: kadako_development
+  pool: 5
   username: root
-  password: pa55wd
-
+  password: depassion
+  socket: /tmp/mysql.sock
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -15,6 +16,20 @@ test: &TEST
   encoding: utf8
   reconnect: false
   database: kadako_test
+  pool: 5
   username: root
-  password: pa55wd
+  password: depassion
+  socket: /tmp/mysql.sock
 
+  production:
+    adapter: mysql
+    encoding: utf8
+    reconnect: false
+    database: kadako
+    pool: 5
+    username: root
+    password: FR8sT6
+    socket: /var/run/mysqld/mysqld.sock
+
+cucumber:
+  <<: *TEST

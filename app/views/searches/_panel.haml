@@ -1,0 +1,21 @@
+%fieldset.search
+  %legend Search Candidates
+  
+  - form_tag searches_url, :method => :get do
+  
+    %p
+      %label Body 
+      %br
+      = select_tag 'body', options_for_select(Body.dropdown, @body)
+      
+    
+    %p
+      %label Technique 
+      %br
+      = select_tag 'technique', options_for_select(Technique.dropdown, @technique)
+      
+      
+      
+    %p
+      = awesome_button 'Search'
+    

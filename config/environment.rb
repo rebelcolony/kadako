@@ -38,13 +38,13 @@ Rails::Initializer.run do |config|
   
   config.action_mailer.delivery_method  :smtp
   config.action_mailer.smtp_settings = {
-    :enable_starttls_auto => true,
-    :address => "smtp.gmail.com",
-    :port => 587,
-    :domain => "kadako.com",
-    :authentication => :plain,
-    :user_name => "info@kadako.com",
-    :password => "greyling"
-  }
+      :enable_starttls_auto => true,
+      :address => "smtp.gmail.com",
+      :port => 587,
+      :domain => "kadako.com",
+      :authentication => :plain,
+      :user_name => "info@kadako.com",
+      :password => "greyling"
+    }
   
 end

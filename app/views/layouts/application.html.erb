@@ -24,7 +24,9 @@
 	<!-- END #banner --></div>
 	<%= render :partial => 'layouts/nav' %>
 	<div id="content">	
+	  <% if flash.any? %>
 		<%= render :partial => 'layouts/flash_message' %>
+		<% end %>
 		<%= render :partial => 'layouts/admin_nav' %>
 		<%= yield %>
 	<!-- END #content --></div>

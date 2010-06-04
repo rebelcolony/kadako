@@ -1,4 +1,9 @@
 = render :partial => 'panel'
 
-= render :partial => 'results'
+
+- if @users && @users.any?
+  = render :partial => 'results'
+- else
+  .help
+    Sorry, there are no candidates matching your search. Please try again.
 

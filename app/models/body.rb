@@ -7,7 +7,7 @@ class Body < ActiveRecord::Base
   # Class methods
   class << self
     def dropdown
-      [['All', ''] ] + all.map { |u| [u.name, u.id] }
+      [['All', 'all'] ] + all.map { |u| [u.name, u.id] }
     end
   end
   

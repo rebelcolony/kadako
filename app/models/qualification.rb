@@ -10,5 +10,47 @@ class Qualification < ActiveRecord::Base
                                            #:message => "must be either .jpg, .png, or .gif format"
   #validates_attachment_size :cert, :less_than => 1.megabyte, :message => "must be smaller than 1MB"
   
+  
+  named_scope :by_body, lambda { |body|
+    {
+     :conditions => ["body_id = ?", body.id] 
+    }
+  }
+  
+  named_scope :by_technique, lambda { |body|
+    {
+     :conditions => ["body_id = ?", body.id] 
+    }
+  }
+  
+  
+  named_scope :by_body_and_technique, lambda { |body, technique|
+    {
+     :conditions => ["body_id = ? AND technique_id = ?", body.id, technique.id] 
+    }
+  }
+  
+  
+  class << self
+  
+    def search(body, technique)
+      
+      results = []
+      if body && technique
+        results = self.by_body_and_technique(body, technique).map { |u| u.user }
+      elsif body
+        results = self.by_body(body).map { |u| u.user }
+      elsif technique
+        results = self.by_technique(technique).map { |u| u.user }
+      else
+        results = User.all
+      end
+      results.uniq
+    end
+    
+  end
+  
+  
+  
 
 end

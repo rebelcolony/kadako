@@ -45,7 +45,8 @@ class Qualification < ActiveRecord::Base
       else
         results = User.all
       end
-      results.uniq
+      res_uniq = results.uniq
+      res_uniq.select { |u| u != nil }
     end
     
   end

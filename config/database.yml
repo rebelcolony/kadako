@@ -4,7 +4,7 @@ development:
   reconnect: false
   database: kadako_development
   username: root
-  password: pa55wd
+  password: depassion
 
 
 # Warning: The database defined as "test" will be erased and
@@ -16,5 +16,8 @@ test: &TEST
   reconnect: false
   database: kadako_test
   username: root
-  password: pa55wd
+  password: depassion
 
+
+cucumber:
+  <<: *TEST

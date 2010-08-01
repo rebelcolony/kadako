@@ -10,7 +10,7 @@
 			<% if current_user %>
 				Logged in as <%= current_user.email %>
 				<%= link_to "Profile", current_user %>
-				<%= link_to "Logout", logout_path %>
+				<%= link_to "Logout", logout_path, :id => "logout" %>
 			<% end -%>
 		<!-- END #user_meta--></div>
 	<!-- END #nav_bar --></div>

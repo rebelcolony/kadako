@@ -41,6 +41,10 @@ hr {
   padding:1px;
 }
 
+.bg {
+	background:#C6DaE2;
+}
+
 body {
   background-color:#fff;
   font-family:"Lucida Grande", arial;

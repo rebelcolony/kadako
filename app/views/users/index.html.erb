@@ -8,6 +8,8 @@
 	</div>	
 
 <% for user in @users %>
-<%= render :partial => "user", :locals => {:user => user} %>
+	<% if user.qualifications.exists? || admin? %>
+		<%= render :partial => "user", :locals => {:user => user} %>
+	<% end -%>	
 <% end %>
 

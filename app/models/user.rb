@@ -1,6 +1,7 @@
 class User < ActiveRecord::Base
   acts_as_authentic
   has_many :qualifications
+  belongs_to :industry
   has_many :histories
   has_one :profile
   has_attached_file :headshot, :styles => { :medium => "300x300>", :thumb => "100x100>" }

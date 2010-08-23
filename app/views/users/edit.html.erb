@@ -35,6 +35,9 @@ Must be .jpg, .png or .gif file format and less than 1MB
 <h3>PCN number:</h3>
 <%= f.text_field :pcn_number, :size => 30 %>
 
+<h3>Select your main industry:</h3>
+<%= collection_select(:user, :industry_id, Industry.find(:all, :order => "name ASC"), :id, :name) %>
+
 <h3>Other governing body ID number:</h3>
 <%= f.text_field :other_body_id, :size => 30 %>
 

@@ -1,0 +1,9 @@
+<h2 class="h2header">All Industries</h2>
+<span><%= link_to 'New Industry', new_industry_path %></span>
+<ul> 
+<% for industry in @industries %>
+	<li><h3><%=h industry.name %> <span class="admin_links"><%= link_to 'Edit', edit_industry_path(industry) %>
+  		<%= link_to 'Destroy', industry, :confirm => 'Are you sure?', :method => :delete %></span></h3>
+  </li>
+<% end %>
+</ul>

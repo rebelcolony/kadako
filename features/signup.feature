@@ -9,14 +9,10 @@ Feature: Signup
     When I fill in "123456" for "user_password"
     When I fill in "123456" for "user_password_confirmation"
     When I press "user_submit"
-    Then I should see "Registration successfull"
-    
-  Scenario: confirmation email
-    When I signup
+    Then I should see "Registration successfull" 
     Then "kevin@rebelcolony.com" should receive an email
-  
-  
     
+
   
   
   

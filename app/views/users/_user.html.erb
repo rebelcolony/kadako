@@ -1,0 +1,34 @@
+<% total_experience = 0 -%>
+  <div class="candidate_index_box">
+	<h4 class="user_index_header">Candidate: <%= user.id %></h4>
+	Industry: 
+	<% for history in user.histories %>
+    <!-- <span class="user_index_sector"><%= history.sector.name %></span> -->
+	<% end -%>
+	<% for history in user.histories %>
+		<% @time = (history.end.month - history.start.month) + (12 * (history.end.year - history.start.year)) -%>
+		<% @experience = @time / 12.0 -%>
+		<% @experience.round(1).to_f -%>
+		<% total_experience += @experience -%>
+		<% @work_experience = total_experience %>
+	<% end -%>
+	<% if user.histories.exists? %>
+		<%= "Years Experience:#{@work_experience.round(1)}" %>
+	<% end -%>
+	<table cellspacing=0>
+				<% for qualification in user.qualifications %>
+						<tr class="<%= cycle('list-line-odd_user_index', 'list-line-even_user_index') %>">
+							<td width=120><%= qualification.body.name %></td>
+							<td width=20><%= qualification.level.level %></td>
+							<td width=200><%= qualification.technique.name %></td>
+							<td width=200><%= qualification.category.name %></td>
+							<td><%= qualification.expire_date.strftime(" %d %B %Y") %></td>
+						</tr>
+
+		<% end -%>
+		</table>
+    <% if admin? %>
+    <%= link_to 'Show', user %>
+    <%= link_to 'Destroy', user, :confirm => 'Are you sure?', :method => :delete %>
+		<% end -%>	
+  </div>

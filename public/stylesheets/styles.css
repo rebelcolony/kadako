@@ -633,6 +633,8 @@ h2.qual_form_h2 {
 fieldset.search {
   padding: 8px;
   border: 1px solid blue;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
 }
 
 fieldset.search legend {

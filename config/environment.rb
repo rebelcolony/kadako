@@ -17,6 +17,10 @@ Rails::Initializer.run do |config|
   # Specify gems that this application depends on and have them installed with rake gems:install
   config.gem 'hoptoad_notifier'
   config.gem 'email_spec', :lib => 'email_spec'  
+  config.gem 'database_cleaner'
+  config.gem 'webrat'
+ 
+ 
 
   # Only load the plugins named here, in the order given (default is alphabetical).
   # :all can be used as a placeholder for all plugins not explicitly named
@@ -39,13 +43,13 @@ Rails::Initializer.run do |config|
   
   config.action_mailer.delivery_method  :smtp
   config.action_mailer.smtp_settings = {
-    :enable_starttls_auto => true,
-    :address => "smtp.gmail.com",
-    :port => 587,
-    :domain => "kadako.com",
-    :authentication => :plain,
-    :user_name => "info@kadako.com",
-    :password => "greyling"
-  }
+      :enable_starttls_auto => true,
+      :address => "smtp.gmail.com",
+      :port => 587,
+      :domain => "kadako.com",
+      :authentication => :plain,
+      :user_name => "info@kadako.com",
+      :password => "greyling"
+    }
   
 end

@@ -16,5 +16,4 @@ Feature: Login
   Scenario: logout
     Given I am logged in
     Then I follow "logout"
-    Then show me the page
     Then I should see "Sucessfully logged out"

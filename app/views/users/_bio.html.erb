@@ -54,8 +54,11 @@
 					</tr>
 					<tr class="<%= cycle('list-line-odd', 'list-line-even') %>">
 						<td>Main Industry:</td>
-						<td><%= @user.industry.name %></td>		
+						<% unless @user.industry.blank? %>
+							<td><%= @user.industry.name %></td>		
+						<% end -%>	
 					</tr>
 				</table>				
 			<!--END .bio_data --></div>	
 		<!--END .bio_box --></div>	
+		

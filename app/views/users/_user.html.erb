@@ -1,6 +1,6 @@
 <% total_experience = 0 -%>
   <div class="candidate_index_box">
-	<p><span class="bg">Candidate:</span><%= user.id %> <span class="bg">Industry:</span><%= user.industry.name %>
+	<p><span class="bg">Candidate number:</span><%= user.id %> <span class="bg">Industry:</span><%= user.industry.name %>
 	<% for history in user.histories %>
 		<% @time = (history.end.month - history.start.month) + (12 * (history.end.year - history.start.year)) -%>
 		<% @experience = @time / 12.0 -%>

@@ -42,7 +42,8 @@ hr {
 }
 
 .bg {
-	background:#C6DaE2;
+	background:;
+	color:#717171;
 }
 
 body {
@@ -636,7 +637,7 @@ h2.qual_form_h2 {
 
 fieldset.search {
   padding: 8px;
-  border: 1px solid blue;
+  border: 1px solid #4F51FF;
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
 }

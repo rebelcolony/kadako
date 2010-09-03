@@ -8321,3 +8321,623 @@ Rendered layouts/_nav (95.9ms)
 Rendered layouts/_admin_nav (0.4ms)
 Rendered layouts/_footer (4.2ms)
 Completed in 144ms (View: 118, DB: 19) | 200 OK [http://localhost/adminlogin]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing InfoController#index (for 127.0.0.1 at 2010-08-24 12:41:09) [GET]
+  [4;36;1mPost Load (0.3ms)[0m   [0;1mSELECT * FROM `posts` ORDER BY created_at DESC LIMIT 3[0m
+Rendering template within layouts/application
+Rendering info/index
+  [4;35;1mUser Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`persistence_token` = '4f8126d3b498025210f528f9d88698e067de2768c9ceabf51a25d3097607d610e49f3f7f2ba5886a518e1b0d6b7b9c1a8f92e9480b196726619614fea4fb0d8c') LIMIT 1[0m
+Rendered layouts/_nav (96.9ms)
+Rendered layouts/_admin_nav (0.2ms)
+Rendered layouts/_footer (1.2ms)
+Completed in 162ms (View: 125, DB: 3) | 200 OK [http://localhost/]
+** [Hoptoad] Notifier 2.3.5 ready to catch errors
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing InfoController#index (for 127.0.0.1 at 2010-09-03 11:07:09) [GET]
+  [4;36;1mPost Load (152.3ms)[0m   [0;1mSELECT * FROM `posts` ORDER BY created_at DESC LIMIT 3[0m
+Rendering template within layouts/application
+Rendering info/index
+  [4;35;1mUser Columns (104.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendered layouts/_nav (257.7ms)
+Rendered layouts/_admin_nav (15.8ms)
+Rendered layouts/_footer (27.6ms)
+Completed in 713ms (View: 422, DB: 257) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-09-03 11:07:14) [GET]
+  [4;36;1mUser Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` [0m
+Rendering template within layouts/application
+Rendering users/index
+  [4;36;1mBody Load (37.3ms)[0m   [0;1mSELECT * FROM `bodies` [0m
+  [4;35;1mBody Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `bodies`[0m
+  [4;36;1mTechnique Load (1.7ms)[0m   [0;1mSELECT * FROM `techniques` [0m
+  [4;35;1mTechnique Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `techniques`[0m
+Rendered searches/_panel (111.6ms)
+  [4;36;1mQualification Load (61.4ms)[0m   [0;1mSELECT `qualifications`.id FROM `qualifications` WHERE (`qualifications`.user_id = 5) LIMIT 1[0m
+  [4;35;1mIndustry Columns (27.5ms)[0m   [0mSHOW FIELDS FROM `industries`[0m
+  [4;36;1mIndustry Load (0.3ms)[0m   [0;1mSELECT * FROM `industries` WHERE (`industries`.`id` = 1) [0m
+  [4;35;1mHistory Load (61.5ms)[0m   [0mSELECT * FROM `histories` WHERE (`histories`.user_id = 5) [0m
+  [4;36;1mHistory Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `histories`[0m
+  [4;35;1mHistory Load (0.3ms)[0m   [0mSELECT `histories`.id FROM `histories` WHERE (`histories`.user_id = 5) LIMIT 1[0m
+  [4;36;1mQualification Load (0.2ms)[0m   [0;1mSELECT * FROM `qualifications` WHERE (`qualifications`.user_id = 5) [0m
+  [4;35;1mQualification Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `qualifications`[0m
+  [4;36;1mBody Load (0.3ms)[0m   [0;1mSELECT * FROM `bodies` WHERE (`bodies`.`id` = 3) [0m
+  [4;35;1mLevel Columns (22.1ms)[0m   [0mSHOW FIELDS FROM `levels`[0m
+  [4;36;1mLevel Load (0.3ms)[0m   [0;1mSELECT * FROM `levels` WHERE (`levels`.`id` = 2) [0m
+  [4;35;1mTechnique Load (0.3ms)[0m   [0mSELECT * FROM `techniques` WHERE (`techniques`.`id` = 1) [0m
+  [4;36;1mCategory Columns (2.8ms)[0m   [0;1mSHOW FIELDS FROM `categories`[0m
+  [4;35;1mCategory Load (0.8ms)[0m   [0mSELECT * FROM `categories` WHERE (`categories`.`id` = 1) [0m
+Rendered users/_user (255.7ms)
+Rendered layouts/_nav (9.0ms)
+Rendered layouts/_admin_nav (0.2ms)
+Rendered layouts/_footer (0.8ms)
+Completed in 696ms (View: 447, DB: 223) | 200 OK [http://localhost/users]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-09-03 11:12:53) [GET]
+  [4;36;1mUser Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM `users` [0m
+Rendering template within layouts/application
+Rendering users/index
+  [4;36;1mBody Load (0.3ms)[0m   [0;1mSELECT * FROM `bodies` [0m
+  [4;35;1mBody Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `bodies`[0m
+  [4;36;1mTechnique Load (0.3ms)[0m   [0;1mSELECT * FROM `techniques` [0m
+  [4;35;1mTechnique Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `techniques`[0m
+Rendered searches/_panel (125.4ms)
+  [4;36;1mQualification Load (0.3ms)[0m   [0;1mSELECT `qualifications`.id FROM `qualifications` WHERE (`qualifications`.user_id = 5) LIMIT 1[0m
+  [4;35;1mIndustry Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `industries`[0m
+  [4;36;1mIndustry Load (0.2ms)[0m   [0;1mSELECT * FROM `industries` WHERE (`industries`.`id` = 1) [0m
+  [4;35;1mHistory Load (0.3ms)[0m   [0mSELECT * FROM `histories` WHERE (`histories`.user_id = 5) [0m
+  [4;36;1mHistory Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `histories`[0m
+  [4;35;1mHistory Load (0.3ms)[0m   [0mSELECT `histories`.id FROM `histories` WHERE (`histories`.user_id = 5) LIMIT 1[0m
+  [4;36;1mQualification Load (29.6ms)[0m   [0;1mSELECT * FROM `qualifications` WHERE (`qualifications`.user_id = 5) [0m
+  [4;35;1mQualification Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `qualifications`[0m
+  [4;36;1mBody Load (0.3ms)[0m   [0;1mSELECT * FROM `bodies` WHERE (`bodies`.`id` = 3) [0m
+  [4;35;1mLevel Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `levels`[0m
+  [4;36;1mLevel Load (0.2ms)[0m   [0;1mSELECT * FROM `levels` WHERE (`levels`.`id` = 2) [0m
+  [4;35;1mTechnique Load (0.3ms)[0m   [0mSELECT * FROM `techniques` WHERE (`techniques`.`id` = 1) [0m
+  [4;36;1mCategory Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `categories`[0m
+  [4;35;1mCategory Load (0.2ms)[0m   [0mSELECT * FROM `categories` WHERE (`categories`.`id` = 1) [0m
+Rendered users/_user (94.8ms)
+Rendered layouts/_nav (10.3ms)
+Rendered layouts/_admin_nav (0.2ms)
+Rendered layouts/_footer (0.8ms)
+Completed in 289ms (View: 221, DB: 43) | 200 OK [http://localhost/users]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-09-03 11:13:06) [GET]
+  [4;36;1mUser Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` [0m
+Rendering template within layouts/application
+Rendering users/index
+  [4;36;1mBody Load (0.3ms)[0m   [0;1mSELECT * FROM `bodies` [0m
+  [4;35;1mBody Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `bodies`[0m
+  [4;36;1mTechnique Load (0.3ms)[0m   [0;1mSELECT * FROM `techniques` [0m
+  [4;35;1mTechnique Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `techniques`[0m
+Rendered searches/_panel (30.0ms)
+  [4;36;1mQualification Load (0.3ms)[0m   [0;1mSELECT `qualifications`.id FROM `qualifications` WHERE (`qualifications`.user_id = 5) LIMIT 1[0m
+  [4;35;1mIndustry Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `industries`[0m
+  [4;36;1mIndustry Load (0.3ms)[0m   [0;1mSELECT * FROM `industries` WHERE (`industries`.`id` = 1) [0m
+  [4;35;1mHistory Load (0.3ms)[0m   [0mSELECT * FROM `histories` WHERE (`histories`.user_id = 5) [0m
+  [4;36;1mHistory Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `histories`[0m
+  [4;35;1mHistory Load (0.3ms)[0m   [0mSELECT `histories`.id FROM `histories` WHERE (`histories`.user_id = 5) LIMIT 1[0m
+  [4;36;1mQualification Load (0.2ms)[0m   [0;1mSELECT * FROM `qualifications` WHERE (`qualifications`.user_id = 5) [0m
+  [4;35;1mQualification Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `qualifications`[0m
+  [4;36;1mBody Load (0.9ms)[0m   [0;1mSELECT * FROM `bodies` WHERE (`bodies`.`id` = 3) [0m
+  [4;35;1mLevel Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `levels`[0m
+  [4;36;1mLevel Load (0.2ms)[0m   [0;1mSELECT * FROM `levels` WHERE (`levels`.`id` = 2) [0m
+  [4;35;1mTechnique Load (0.2ms)[0m   [0mSELECT * FROM `techniques` WHERE (`techniques`.`id` = 1) [0m
+  [4;36;1mCategory Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `categories`[0m
+  [4;35;1mCategory Load (0.2ms)[0m   [0mSELECT * FROM `categories` WHERE (`categories`.`id` = 1) [0m
+Rendered users/_user (65.0ms)
+Rendered layouts/_nav (10.0ms)
+Rendered layouts/_admin_nav (0.2ms)
+Rendered layouts/_footer (0.8ms)
+Completed in 254ms (View: 119, DB: 14) | 200 OK [http://localhost/users]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-09-03 11:13:23) [GET]
+  [4;36;1mUser Columns (2.3ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` [0m
+Rendering template within layouts/application
+Rendering users/index
+  [4;36;1mBody Load (0.3ms)[0m   [0;1mSELECT * FROM `bodies` [0m
+  [4;35;1mBody Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `bodies`[0m
+  [4;36;1mTechnique Load (0.3ms)[0m   [0;1mSELECT * FROM `techniques` [0m
+  [4;35;1mTechnique Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `techniques`[0m
+Rendered searches/_panel (30.9ms)
+  [4;36;1mQualification Load (0.3ms)[0m   [0;1mSELECT `qualifications`.id FROM `qualifications` WHERE (`qualifications`.user_id = 5) LIMIT 1[0m
+  [4;35;1mIndustry Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `industries`[0m
+  [4;36;1mIndustry Load (0.2ms)[0m   [0;1mSELECT * FROM `industries` WHERE (`industries`.`id` = 1) [0m
+  [4;35;1mHistory Load (0.3ms)[0m   [0mSELECT * FROM `histories` WHERE (`histories`.user_id = 5) [0m
+  [4;36;1mHistory Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `histories`[0m
+  [4;35;1mHistory Load (0.3ms)[0m   [0mSELECT `histories`.id FROM `histories` WHERE (`histories`.user_id = 5) LIMIT 1[0m
+  [4;36;1mQualification Load (0.4ms)[0m   [0;1mSELECT * FROM `qualifications` WHERE (`qualifications`.user_id = 5) [0m
+  [4;35;1mQualification Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `qualifications`[0m
+  [4;36;1mBody Load (0.3ms)[0m   [0;1mSELECT * FROM `bodies` WHERE (`bodies`.`id` = 3) [0m
+  [4;35;1mLevel Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `levels`[0m
+  [4;36;1mLevel Load (0.2ms)[0m   [0;1mSELECT * FROM `levels` WHERE (`levels`.`id` = 2) [0m
+  [4;35;1mTechnique Load (0.3ms)[0m   [0mSELECT * FROM `techniques` WHERE (`techniques`.`id` = 1) [0m
+  [4;36;1mCategory Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `categories`[0m
+  [4;35;1mCategory Load (0.2ms)[0m   [0mSELECT * FROM `categories` WHERE (`categories`.`id` = 1) [0m
+Rendered users/_user (151.9ms)
+Rendered layouts/_nav (8.9ms)
+Rendered layouts/_admin_nav (0.2ms)
+Rendered layouts/_footer (0.8ms)
+Completed in 242ms (View: 204, DB: 15) | 200 OK [http://localhost/users]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-09-03 11:14:04) [GET]
+  [4;36;1mUser Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` [0m
+Rendering template within layouts/application
+Rendering users/index
+  [4;36;1mBody Load (0.3ms)[0m   [0;1mSELECT * FROM `bodies` [0m
+  [4;35;1mBody Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `bodies`[0m
+  [4;36;1mTechnique Load (0.3ms)[0m   [0;1mSELECT * FROM `techniques` [0m
+  [4;35;1mTechnique Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `techniques`[0m
+Rendered searches/_panel (30.0ms)
+  [4;36;1mQualification Load (0.3ms)[0m   [0;1mSELECT `qualifications`.id FROM `qualifications` WHERE (`qualifications`.user_id = 5) LIMIT 1[0m
+  [4;35;1mIndustry Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `industries`[0m
+  [4;36;1mIndustry Load (0.2ms)[0m   [0;1mSELECT * FROM `industries` WHERE (`industries`.`id` = 1) [0m
+  [4;35;1mHistory Load (0.3ms)[0m   [0mSELECT * FROM `histories` WHERE (`histories`.user_id = 5) [0m
+  [4;36;1mHistory Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `histories`[0m
+  [4;35;1mHistory Load (0.9ms)[0m   [0mSELECT `histories`.id FROM `histories` WHERE (`histories`.user_id = 5) LIMIT 1[0m
+  [4;36;1mQualification Load (0.3ms)[0m   [0;1mSELECT * FROM `qualifications` WHERE (`qualifications`.user_id = 5) [0m
+  [4;35;1mQualification Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `qualifications`[0m
+  [4;36;1mBody Load (0.3ms)[0m   [0;1mSELECT * FROM `bodies` WHERE (`bodies`.`id` = 3) [0m
+  [4;35;1mLevel Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `levels`[0m
+  [4;36;1mLevel Load (0.3ms)[0m   [0;1mSELECT * FROM `levels` WHERE (`levels`.`id` = 2) [0m
+  [4;35;1mTechnique Load (0.3ms)[0m   [0mSELECT * FROM `techniques` WHERE (`techniques`.`id` = 1) [0m
+  [4;36;1mCategory Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `categories`[0m
+  [4;35;1mCategory Load (0.2ms)[0m   [0mSELECT * FROM `categories` WHERE (`categories`.`id` = 1) [0m
+Rendered users/_user (158.8ms)
+Rendered layouts/_nav (8.9ms)
+Rendered layouts/_admin_nav (0.3ms)
+Rendered layouts/_footer (1.0ms)
+Completed in 244ms (View: 205, DB: 14) | 200 OK [http://localhost/users]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-09-03 11:14:29) [GET]
+  [4;36;1mUser Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM `users` [0m
+Rendering template within layouts/application
+Rendering users/index
+  [4;36;1mBody Load (0.3ms)[0m   [0;1mSELECT * FROM `bodies` [0m
+  [4;35;1mBody Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `bodies`[0m
+  [4;36;1mTechnique Load (0.3ms)[0m   [0;1mSELECT * FROM `techniques` [0m
+  [4;35;1mTechnique Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `techniques`[0m
+Rendered searches/_panel (149.0ms)
+  [4;36;1mQualification Load (0.3ms)[0m   [0;1mSELECT `qualifications`.id FROM `qualifications` WHERE (`qualifications`.user_id = 5) LIMIT 1[0m
+  [4;35;1mIndustry Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `industries`[0m
+  [4;36;1mIndustry Load (0.2ms)[0m   [0;1mSELECT * FROM `industries` WHERE (`industries`.`id` = 1) [0m
+  [4;35;1mHistory Load (0.3ms)[0m   [0mSELECT * FROM `histories` WHERE (`histories`.user_id = 5) [0m
+  [4;36;1mHistory Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `histories`[0m
+  [4;35;1mHistory Load (0.3ms)[0m   [0mSELECT `histories`.id FROM `histories` WHERE (`histories`.user_id = 5) LIMIT 1[0m
+  [4;36;1mQualification Load (0.2ms)[0m   [0;1mSELECT * FROM `qualifications` WHERE (`qualifications`.user_id = 5) [0m
+  [4;35;1mQualification Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `qualifications`[0m
+  [4;36;1mBody Load (0.4ms)[0m   [0;1mSELECT * FROM `bodies` WHERE (`bodies`.`id` = 3) [0m
+  [4;35;1mLevel Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `levels`[0m
+  [4;36;1mLevel Load (0.2ms)[0m   [0;1mSELECT * FROM `levels` WHERE (`levels`.`id` = 2) [0m
+  [4;35;1mTechnique Load (0.2ms)[0m   [0mSELECT * FROM `techniques` WHERE (`techniques`.`id` = 1) [0m
+  [4;36;1mCategory Columns (2.6ms)[0m   [0;1mSHOW FIELDS FROM `categories`[0m
+  [4;35;1mCategory Load (0.2ms)[0m   [0mSELECT * FROM `categories` WHERE (`categories`.`id` = 1) [0m
+Rendered users/_user (63.6ms)
+Rendered layouts/_nav (8.7ms)
+Rendered layouts/_admin_nav (0.2ms)
+Rendered layouts/_footer (0.8ms)
+Completed in 364ms (View: 324, DB: 14) | 200 OK [http://localhost/users]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-09-03 11:14:58) [GET]
+  [4;36;1mUser Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM `users` [0m
+Rendering template within layouts/application
+Rendering users/index
+  [4;36;1mBody Load (0.3ms)[0m   [0;1mSELECT * FROM `bodies` [0m
+  [4;35;1mBody Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `bodies`[0m
+  [4;36;1mTechnique Load (0.3ms)[0m   [0;1mSELECT * FROM `techniques` [0m
+  [4;35;1mTechnique Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `techniques`[0m
+Rendered searches/_panel (125.8ms)
+  [4;36;1mQualification Load (0.3ms)[0m   [0;1mSELECT `qualifications`.id FROM `qualifications` WHERE (`qualifications`.user_id = 5) LIMIT 1[0m
+  [4;35;1mIndustry Columns (1.8ms)[0m   [0mSHOW FIELDS FROM `industries`[0m
+  [4;36;1mIndustry Load (0.3ms)[0m   [0;1mSELECT * FROM `industries` WHERE (`industries`.`id` = 1) [0m
+  [4;35;1mHistory Load (0.3ms)[0m   [0mSELECT * FROM `histories` WHERE (`histories`.user_id = 5) [0m
+  [4;36;1mHistory Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `histories`[0m
+  [4;35;1mHistory Load (0.3ms)[0m   [0mSELECT `histories`.id FROM `histories` WHERE (`histories`.user_id = 5) LIMIT 1[0m
+  [4;36;1mQualification Load (0.2ms)[0m   [0;1mSELECT * FROM `qualifications` WHERE (`qualifications`.user_id = 5) [0m
+  [4;35;1mQualification Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `qualifications`[0m
+  [4;36;1mBody Load (0.3ms)[0m   [0;1mSELECT * FROM `bodies` WHERE (`bodies`.`id` = 3) [0m
+  [4;35;1mLevel Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `levels`[0m
+  [4;36;1mLevel Load (0.2ms)[0m   [0;1mSELECT * FROM `levels` WHERE (`levels`.`id` = 2) [0m
+  [4;35;1mTechnique Load (0.2ms)[0m   [0mSELECT * FROM `techniques` WHERE (`techniques`.`id` = 1) [0m
+  [4;36;1mCategory Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `categories`[0m
+  [4;35;1mCategory Load (0.2ms)[0m   [0mSELECT * FROM `categories` WHERE (`categories`.`id` = 1) [0m
+Rendered users/_user (65.8ms)
+Rendered layouts/_nav (10.0ms)
+Rendered layouts/_admin_nav (0.2ms)
+Rendered layouts/_footer (0.8ms)
+Completed in 252ms (View: 213, DB: 14) | 200 OK [http://localhost/users]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-09-03 11:15:17) [GET]
+  [4;36;1mUser Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` [0m
+Rendering template within layouts/application
+Rendering users/index
+  [4;36;1mBody Load (0.3ms)[0m   [0;1mSELECT * FROM `bodies` [0m
+  [4;35;1mBody Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `bodies`[0m
+  [4;36;1mTechnique Load (0.3ms)[0m   [0;1mSELECT * FROM `techniques` [0m
+  [4;35;1mTechnique Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `techniques`[0m
+Rendered searches/_panel (32.1ms)
+  [4;36;1mQualification Load (0.3ms)[0m   [0;1mSELECT `qualifications`.id FROM `qualifications` WHERE (`qualifications`.user_id = 5) LIMIT 1[0m
+  [4;35;1mIndustry Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `industries`[0m
+  [4;36;1mIndustry Load (1.0ms)[0m   [0;1mSELECT * FROM `industries` WHERE (`industries`.`id` = 1) [0m
+  [4;35;1mHistory Load (0.3ms)[0m   [0mSELECT * FROM `histories` WHERE (`histories`.user_id = 5) [0m
+  [4;36;1mHistory Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `histories`[0m
+  [4;35;1mHistory Load (0.3ms)[0m   [0mSELECT `histories`.id FROM `histories` WHERE (`histories`.user_id = 5) LIMIT 1[0m
+  [4;36;1mQualification Load (0.2ms)[0m   [0;1mSELECT * FROM `qualifications` WHERE (`qualifications`.user_id = 5) [0m
+  [4;35;1mQualification Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `qualifications`[0m
+  [4;36;1mBody Load (0.3ms)[0m   [0;1mSELECT * FROM `bodies` WHERE (`bodies`.`id` = 3) [0m
+  [4;35;1mLevel Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `levels`[0m
+  [4;36;1mLevel Load (0.2ms)[0m   [0;1mSELECT * FROM `levels` WHERE (`levels`.`id` = 2) [0m
+  [4;35;1mTechnique Load (0.2ms)[0m   [0mSELECT * FROM `techniques` WHERE (`techniques`.`id` = 1) [0m
+  [4;36;1mCategory Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `categories`[0m
+  [4;35;1mCategory Load (1.0ms)[0m   [0mSELECT * FROM `categories` WHERE (`categories`.`id` = 1) [0m
+Rendered users/_user (66.0ms)
+Rendered layouts/_nav (9.5ms)
+Rendered layouts/_admin_nav (0.2ms)
+Rendered layouts/_footer (0.8ms)
+Completed in 256ms (View: 119, DB: 15) | 200 OK [http://localhost/users]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-09-03 11:15:36) [GET]
+  [4;36;1mUser Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` [0m
+Rendering template within layouts/application
+Rendering users/index
+  [4;36;1mBody Load (0.3ms)[0m   [0;1mSELECT * FROM `bodies` [0m
+  [4;35;1mBody Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `bodies`[0m
+  [4;36;1mTechnique Load (0.3ms)[0m   [0;1mSELECT * FROM `techniques` [0m
+  [4;35;1mTechnique Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `techniques`[0m
+Rendered searches/_panel (29.6ms)
+  [4;36;1mQualification Load (0.3ms)[0m   [0;1mSELECT `qualifications`.id FROM `qualifications` WHERE (`qualifications`.user_id = 5) LIMIT 1[0m
+  [4;35;1mIndustry Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `industries`[0m
+  [4;36;1mIndustry Load (0.3ms)[0m   [0;1mSELECT * FROM `industries` WHERE (`industries`.`id` = 1) [0m
+  [4;35;1mHistory Load (0.3ms)[0m   [0mSELECT * FROM `histories` WHERE (`histories`.user_id = 5) [0m
+  [4;36;1mHistory Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `histories`[0m
+  [4;35;1mHistory Load (0.3ms)[0m   [0mSELECT `histories`.id FROM `histories` WHERE (`histories`.user_id = 5) LIMIT 1[0m
+  [4;36;1mQualification Load (0.2ms)[0m   [0;1mSELECT * FROM `qualifications` WHERE (`qualifications`.user_id = 5) [0m
+  [4;35;1mQualification Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `qualifications`[0m
+  [4;36;1mBody Load (0.3ms)[0m   [0;1mSELECT * FROM `bodies` WHERE (`bodies`.`id` = 3) [0m
+  [4;35;1mLevel Columns (2.2ms)[0m   [0mSHOW FIELDS FROM `levels`[0m
+  [4;36;1mLevel Load (0.3ms)[0m   [0;1mSELECT * FROM `levels` WHERE (`levels`.`id` = 2) [0m
+  [4;35;1mTechnique Load (0.3ms)[0m   [0mSELECT * FROM `techniques` WHERE (`techniques`.`id` = 1) [0m
+  [4;36;1mCategory Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `categories`[0m
+  [4;35;1mCategory Load (0.2ms)[0m   [0mSELECT * FROM `categories` WHERE (`categories`.`id` = 1) [0m
+Rendered users/_user (151.5ms)
+Rendered layouts/_nav (9.9ms)
+Rendered layouts/_admin_nav (0.2ms)
+Rendered layouts/_footer (0.8ms)
+Completed in 243ms (View: 204, DB: 14) | 200 OK [http://localhost/users]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-09-03 11:17:03) [GET]
+  [4;36;1mUser Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` [0m
+Rendering template within layouts/application
+Rendering users/index
+  [4;36;1mBody Load (0.3ms)[0m   [0;1mSELECT * FROM `bodies` [0m
+  [4;35;1mBody Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `bodies`[0m
+  [4;36;1mTechnique Load (0.3ms)[0m   [0;1mSELECT * FROM `techniques` [0m
+  [4;35;1mTechnique Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `techniques`[0m
+Rendered searches/_panel (29.1ms)
+  [4;36;1mQualification Load (0.3ms)[0m   [0;1mSELECT `qualifications`.id FROM `qualifications` WHERE (`qualifications`.user_id = 5) LIMIT 1[0m
+  [4;35;1mIndustry Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `industries`[0m
+  [4;36;1mIndustry Load (0.2ms)[0m   [0;1mSELECT * FROM `industries` WHERE (`industries`.`id` = 1) [0m
+  [4;35;1mHistory Load (0.4ms)[0m   [0mSELECT * FROM `histories` WHERE (`histories`.user_id = 5) [0m
+  [4;36;1mHistory Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `histories`[0m
+  [4;35;1mHistory Load (0.3ms)[0m   [0mSELECT `histories`.id FROM `histories` WHERE (`histories`.user_id = 5) LIMIT 1[0m
+  [4;36;1mQualification Load (0.2ms)[0m   [0;1mSELECT * FROM `qualifications` WHERE (`qualifications`.user_id = 5) [0m
+  [4;35;1mQualification Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `qualifications`[0m
+  [4;36;1mBody Load (0.3ms)[0m   [0;1mSELECT * FROM `bodies` WHERE (`bodies`.`id` = 3) [0m
+  [4;35;1mLevel Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `levels`[0m
+  [4;36;1mLevel Load (0.2ms)[0m   [0;1mSELECT * FROM `levels` WHERE (`levels`.`id` = 2) [0m
+  [4;35;1mTechnique Load (0.3ms)[0m   [0mSELECT * FROM `techniques` WHERE (`techniques`.`id` = 1) [0m
+  [4;36;1mCategory Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `categories`[0m
+  [4;35;1mCategory Load (0.3ms)[0m   [0mSELECT * FROM `categories` WHERE (`categories`.`id` = 1) [0m
+Rendered users/_user (160.2ms)
+Rendered layouts/_nav (9.3ms)
+Rendered layouts/_admin_nav (0.2ms)
+Rendered layouts/_footer (0.8ms)
+Completed in 244ms (View: 204, DB: 15) | 200 OK [http://localhost/users]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-09-03 11:17:48) [GET]
+  [4;36;1mUser Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.8ms)[0m   [0mSELECT * FROM `users` [0m
+Rendering template within layouts/application
+Rendering users/index
+  [4;36;1mBody Load (0.3ms)[0m   [0;1mSELECT * FROM `bodies` [0m
+  [4;35;1mBody Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `bodies`[0m
+  [4;36;1mTechnique Load (0.3ms)[0m   [0;1mSELECT * FROM `techniques` [0m
+  [4;35;1mTechnique Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `techniques`[0m
+Rendered searches/_panel (124.4ms)
+  [4;36;1mQualification Load (0.3ms)[0m   [0;1mSELECT `qualifications`.id FROM `qualifications` WHERE (`qualifications`.user_id = 5) LIMIT 1[0m
+  [4;35;1mIndustry Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `industries`[0m
+  [4;36;1mIndustry Load (0.2ms)[0m   [0;1mSELECT * FROM `industries` WHERE (`industries`.`id` = 1) [0m
+  [4;35;1mHistory Load (0.3ms)[0m   [0mSELECT * FROM `histories` WHERE (`histories`.user_id = 5) [0m
+  [4;36;1mHistory Columns (1.2ms)[0m   [0;1mSHOW FIELDS FROM `histories`[0m
+  [4;35;1mHistory Load (0.3ms)[0m   [0mSELECT `histories`.id FROM `histories` WHERE (`histories`.user_id = 5) LIMIT 1[0m
+  [4;36;1mQualification Load (0.2ms)[0m   [0;1mSELECT * FROM `qualifications` WHERE (`qualifications`.user_id = 5) [0m
+  [4;35;1mQualification Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `qualifications`[0m
+  [4;36;1mBody Load (0.3ms)[0m   [0;1mSELECT * FROM `bodies` WHERE (`bodies`.`id` = 3) [0m
+  [4;35;1mLevel Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `levels`[0m
+  [4;36;1mLevel Load (0.2ms)[0m   [0;1mSELECT * FROM `levels` WHERE (`levels`.`id` = 2) [0m
+  [4;35;1mTechnique Load (0.2ms)[0m   [0mSELECT * FROM `techniques` WHERE (`techniques`.`id` = 1) [0m
+  [4;36;1mCategory Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `categories`[0m
+  [4;35;1mCategory Load (0.2ms)[0m   [0mSELECT * FROM `categories` WHERE (`categories`.`id` = 1) [0m
+Rendered users/_user (61.8ms)
+Rendered layouts/_nav (8.9ms)
+Rendered layouts/_admin_nav (0.2ms)
+Rendered layouts/_footer (0.8ms)
+Completed in 242ms (View: 204, DB: 13) | 200 OK [http://localhost/users]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-09-03 11:18:18) [GET]
+  [4;36;1mUser Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` [0m
+Rendering template within layouts/application
+Rendering users/index
+  [4;36;1mBody Load (0.3ms)[0m   [0;1mSELECT * FROM `bodies` [0m
+  [4;35;1mBody Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `bodies`[0m
+  [4;36;1mTechnique Load (0.3ms)[0m   [0;1mSELECT * FROM `techniques` [0m
+  [4;35;1mTechnique Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `techniques`[0m
+Rendered searches/_panel (32.4ms)
+  [4;36;1mQualification Load (0.3ms)[0m   [0;1mSELECT `qualifications`.id FROM `qualifications` WHERE (`qualifications`.user_id = 5) LIMIT 1[0m
+  [4;35;1mIndustry Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `industries`[0m
+  [4;36;1mIndustry Load (0.3ms)[0m   [0;1mSELECT * FROM `industries` WHERE (`industries`.`id` = 1) [0m
+  [4;35;1mHistory Load (0.3ms)[0m   [0mSELECT * FROM `histories` WHERE (`histories`.user_id = 5) [0m
+  [4;36;1mHistory Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `histories`[0m
+  [4;35;1mHistory Load (0.3ms)[0m   [0mSELECT `histories`.id FROM `histories` WHERE (`histories`.user_id = 5) LIMIT 1[0m
+  [4;36;1mQualification Load (0.2ms)[0m   [0;1mSELECT * FROM `qualifications` WHERE (`qualifications`.user_id = 5) [0m
+  [4;35;1mQualification Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `qualifications`[0m
+  [4;36;1mBody Load (0.3ms)[0m   [0;1mSELECT * FROM `bodies` WHERE (`bodies`.`id` = 3) [0m
+  [4;35;1mLevel Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `levels`[0m
+  [4;36;1mLevel Load (0.3ms)[0m   [0;1mSELECT * FROM `levels` WHERE (`levels`.`id` = 2) [0m
+  [4;35;1mTechnique Load (0.3ms)[0m   [0mSELECT * FROM `techniques` WHERE (`techniques`.`id` = 1) [0m
+  [4;36;1mCategory Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `categories`[0m
+  [4;35;1mCategory Load (0.2ms)[0m   [0mSELECT * FROM `categories` WHERE (`categories`.`id` = 1) [0m
+Rendered users/_user (63.7ms)
+Rendered layouts/_nav (9.4ms)
+Rendered layouts/_admin_nav (0.2ms)
+Rendered layouts/_footer (0.8ms)
+Completed in 297ms (View: 216, DB: 13) | 200 OK [http://localhost/users]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-09-03 11:18:28) [GET]
+  [4;36;1mUser Columns (2.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (21.7ms)[0m   [0mSELECT * FROM `users` [0m
+Rendering template within layouts/application
+Rendering users/index
+  [4;36;1mBody Load (0.3ms)[0m   [0;1mSELECT * FROM `bodies` [0m
+  [4;35;1mBody Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `bodies`[0m
+  [4;36;1mTechnique Load (0.3ms)[0m   [0;1mSELECT * FROM `techniques` [0m
+  [4;35;1mTechnique Columns (10.1ms)[0m   [0mSHOW FIELDS FROM `techniques`[0m
+Rendered searches/_panel (43.9ms)
+  [4;36;1mQualification Load (0.3ms)[0m   [0;1mSELECT `qualifications`.id FROM `qualifications` WHERE (`qualifications`.user_id = 5) LIMIT 1[0m
+  [4;35;1mIndustry Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `industries`[0m
+  [4;36;1mIndustry Load (0.2ms)[0m   [0;1mSELECT * FROM `industries` WHERE (`industries`.`id` = 1) [0m
+  [4;35;1mHistory Load (0.4ms)[0m   [0mSELECT * FROM `histories` WHERE (`histories`.user_id = 5) [0m
+  [4;36;1mHistory Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `histories`[0m
+  [4;35;1mHistory Load (0.3ms)[0m   [0mSELECT `histories`.id FROM `histories` WHERE (`histories`.user_id = 5) LIMIT 1[0m
+  [4;36;1mQualification Load (0.2ms)[0m   [0;1mSELECT * FROM `qualifications` WHERE (`qualifications`.user_id = 5) [0m
+  [4;35;1mQualification Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `qualifications`[0m
+  [4;36;1mBody Load (0.3ms)[0m   [0;1mSELECT * FROM `bodies` WHERE (`bodies`.`id` = 3) [0m
+  [4;35;1mLevel Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `levels`[0m
+  [4;36;1mLevel Load (0.2ms)[0m   [0;1mSELECT * FROM `levels` WHERE (`levels`.`id` = 2) [0m
+  [4;35;1mTechnique Load (0.3ms)[0m   [0mSELECT * FROM `techniques` WHERE (`techniques`.`id` = 1) [0m
+  [4;36;1mCategory Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `categories`[0m
+  [4;35;1mCategory Load (0.3ms)[0m   [0mSELECT * FROM `categories` WHERE (`categories`.`id` = 1) [0m
+Rendered users/_user (61.7ms)
+Rendered layouts/_nav (13.3ms)
+Rendered layouts/_admin_nav (0.2ms)
+Rendered layouts/_footer (0.8ms)
+Completed in 191ms (View: 122, DB: 44) | 200 OK [http://localhost/users]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-09-03 11:19:14) [GET]
+  [4;36;1mUser Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` [0m
+Rendering template within layouts/application
+Rendering users/index
+
+ActionView::TemplateError (The line was indented 2 levels deeper than the previous line.) on line #7 of app/views/searches/_panel.haml:
+4:   - form_tag searches_url, :method => :get do
+5:   
+6:    
+7:       %label Body 
+8:       %br
+9:       = select_tag 'body', options_for_select(Body.dropdown, @body)
+10:       
+
+    app/views/searches/_panel.haml:7
+    haml (3.0.14) lib/haml/precompiler.rb:181:in `precompile'
+    haml (3.0.14) lib/haml/engine.rb:121:in `initialize'
+    haml (3.0.14) lib/haml/template/plugin.rb:29:in `new'
+    haml (3.0.14) lib/haml/template/plugin.rb:29:in `compile'
+    haml (3.0.14) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    app/views/users/index.html.erb:1
+    haml (3.0.14) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (3.0.14) lib/haml/helpers/action_view_mods.rb:13:in `render'
+    haml (3.0.14) lib/sass/plugin/rack.rb:41:in `call'
+    /usr/local/lib/ruby/gems/1.8/gems/hoptoad_notifier-2.3.5/lib/hoptoad_notifier/rack.rb:27:in `call'
+
+Rendered rescues/_trace (186.5ms)
+Rendered rescues/_request_and_response (2.1ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-09-03 11:19:21) [GET]
+  [4;36;1mUser Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` [0m
+Rendering template within layouts/application
+Rendering users/index
+  [4;36;1mBody Load (0.3ms)[0m   [0;1mSELECT * FROM `bodies` [0m
+  [4;35;1mBody Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `bodies`[0m
+  [4;36;1mTechnique Load (0.3ms)[0m   [0;1mSELECT * FROM `techniques` [0m
+  [4;35;1mTechnique Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `techniques`[0m
+Rendered searches/_panel (34.1ms)
+  [4;36;1mQualification Load (0.3ms)[0m   [0;1mSELECT `qualifications`.id FROM `qualifications` WHERE (`qualifications`.user_id = 5) LIMIT 1[0m
+  [4;35;1mIndustry Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `industries`[0m
+  [4;36;1mIndustry Load (0.2ms)[0m   [0;1mSELECT * FROM `industries` WHERE (`industries`.`id` = 1) [0m
+  [4;35;1mHistory Load (0.3ms)[0m   [0mSELECT * FROM `histories` WHERE (`histories`.user_id = 5) [0m
+  [4;36;1mHistory Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `histories`[0m
+  [4;35;1mHistory Load (0.3ms)[0m   [0mSELECT `histories`.id FROM `histories` WHERE (`histories`.user_id = 5) LIMIT 1[0m
+  [4;36;1mQualification Load (0.2ms)[0m   [0;1mSELECT * FROM `qualifications` WHERE (`qualifications`.user_id = 5) [0m
+  [4;35;1mQualification Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `qualifications`[0m
+  [4;36;1mBody Load (0.3ms)[0m   [0;1mSELECT * FROM `bodies` WHERE (`bodies`.`id` = 3) [0m
+  [4;35;1mLevel Columns (1.7ms)[0m   [0mSHOW FIELDS FROM `levels`[0m
+  [4;36;1mLevel Load (0.2ms)[0m   [0;1mSELECT * FROM `levels` WHERE (`levels`.`id` = 2) [0m
+  [4;35;1mTechnique Load (0.2ms)[0m   [0mSELECT * FROM `techniques` WHERE (`techniques`.`id` = 1) [0m
+  [4;36;1mCategory Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `categories`[0m
+  [4;35;1mCategory Load (0.2ms)[0m   [0mSELECT * FROM `categories` WHERE (`categories`.`id` = 1) [0m
+Rendered users/_user (151.5ms)
+Rendered layouts/_nav (8.9ms)
+Rendered layouts/_admin_nav (0.2ms)
+Rendered layouts/_footer (0.8ms)
+Completed in 245ms (View: 207, DB: 13) | 200 OK [http://localhost/users]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SearchesController#index (for 127.0.0.1 at 2010-09-03 11:19:30) [GET]
+  Parameters: {"body"=>"2", "technique"=>"1"}
+  [4;36;1mBody Load (0.3ms)[0m   [0;1mSELECT `bodies`.id FROM `bodies` WHERE (`bodies`.`id` = 2) LIMIT 1[0m
+  [4;35;1mBody Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `bodies`[0m
+  [4;36;1mBody Load (0.2ms)[0m   [0;1mSELECT * FROM `bodies` WHERE (`bodies`.`id` = 2) [0m
+  [4;35;1mTechnique Load (0.3ms)[0m   [0mSELECT `techniques`.id FROM `techniques` WHERE (`techniques`.`id` = 1) LIMIT 1[0m
+  [4;36;1mTechnique Columns (1.1ms)[0m   [0;1mSHOW FIELDS FROM `techniques`[0m
+  [4;35;1mTechnique Load (0.6ms)[0m   [0mSELECT * FROM `techniques` WHERE (`techniques`.`id` = 1) [0m
+  [4;36;1mQualification Load (0.3ms)[0m   [0;1mSELECT * FROM `qualifications` WHERE (body_id = 2 AND technique_id = 1) [0m
+  [4;35;1mQualification Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `qualifications`[0m
+  [4;36;1mUser Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 3) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 3) [0m
+Rendering template within layouts/application
+Rendering searches/index
+  [4;36;1mBody Load (0.3ms)[0m   [0;1mSELECT * FROM `bodies` [0m
+  [4;35;1mTechnique Load (0.2ms)[0m   [0mSELECT * FROM `techniques` [0m
+Rendered searches/_panel (6.9ms)
+Rendered layouts/_nav (9.3ms)
+Rendered layouts/_admin_nav (0.2ms)
+Rendered layouts/_footer (0.8ms)
+Completed in 200ms (View: 132, DB: 8) | 200 OK [http://localhost/searches?body=2&technique=1]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-09-03 11:22:13) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+  [4;36;1mUser Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendered layouts/_nav (29.4ms)
+Rendered layouts/_admin_nav (0.2ms)
+Rendered layouts/_footer (1.1ms)
+Completed in 111ms (View: 104, DB: 2) | 200 OK [http://localhost/adminlogin]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-09-03 11:22:16) [POST]
+  Parameters: {"commit"=>"login", "authenticity_token"=>"mQq40W+DM2Q0tLlCB7RBV4qGjcQBP8ceN3XoowP+FkQ=", "password"=>"admin"}
+Redirected to http://localhost:3000/sessions/new
+Completed in 8ms (DB: 0) | 302 Found [http://localhost/sessions]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-09-03 11:22:16) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+  [4;35;1mUser Columns (3.1ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendered layouts/_nav (35.0ms)
+Rendered layouts/_flash_message (21.9ms)
+Rendered layouts/_admin_nav (0.1ms)
+Rendered layouts/_footer (1.0ms)
+Completed in 78ms (View: 69, DB: 3) | 200 OK [http://localhost/sessions/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-09-03 11:22:21) [POST]
+  Parameters: {"commit"=>"login", "authenticity_token"=>"mQq40W+DM2Q0tLlCB7RBV4qGjcQBP8ceN3XoowP+FkQ=", "password"=>"kadadmin"}
+Redirected to http://localhost:3000/
+Completed in 7ms (DB: 0) | 302 Found [http://localhost/sessions]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing InfoController#index (for 127.0.0.1 at 2010-09-03 11:22:21) [GET]
+  [4;36;1mPost Load (0.3ms)[0m   [0;1mSELECT * FROM `posts` ORDER BY created_at DESC LIMIT 3[0m
+Rendering template within layouts/application
+Rendering info/index
+  [4;35;1mUser Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+Rendered layouts/_nav (31.8ms)
+Rendered layouts/_flash_message (0.2ms)
+Rendered layouts/_admin_nav (1.8ms)
+Rendered layouts/_footer (1.0ms)
+Completed in 69ms (View: 55, DB: 2) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing IndustriesController#index (for 127.0.0.1 at 2010-09-03 11:22:24) [GET]
+  [4;36;1mIndustry Load (0.3ms)[0m   [0;1mSELECT * FROM `industries` [0m
+Rendering template within layouts/application
+Rendering industries/index
+  [4;35;1mIndustry Columns (1.1ms)[0m   [0mSHOW FIELDS FROM `industries`[0m
+  [4;36;1mUser Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Rendered layouts/_nav (124.0ms)
+Rendered layouts/_admin_nav (1.8ms)
+Rendered layouts/_footer (1.0ms)
+Completed in 343ms (View: 326, DB: 3) | 200 OK [http://localhost/industries]

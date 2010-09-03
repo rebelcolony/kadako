@@ -637,7 +637,11 @@ h2.qual_form_h2 {
 
 fieldset.search {
   padding: 8px;
+<<<<<<< HEAD
   border: 1px solid #4F51FF;
+=======
+  border: 1px solid blue;
+>>>>>>> adcaf29a82544e57b888e75fdc5256938764a3b8
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
 }

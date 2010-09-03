@@ -5,8 +5,12 @@
 	</div>	
 
 <% for user in @users %>
+<<<<<<< HEAD
 	<% if user.qualifications.exists? || admin? %>
 		<%= render :partial => "user", :locals => {:user => user} %>
 	<% end -%>	
+=======
+<%= render :partial => "user", :locals => {:user => user} %>
+>>>>>>> adcaf29a82544e57b888e75fdc5256938764a3b8
 <% end %>
 

@@ -7,5 +7,7 @@ class SearchesController < ApplicationController
     
     @body = params[:body].to_i if params[:body] != 'all'
     @technique = params[:technique].to_i if params[:technique] != 'all'
-  end  
+    
+  end
+  
 end
